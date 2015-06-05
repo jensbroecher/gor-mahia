@@ -15,7 +15,7 @@ function letsgo() {
 	showindicator();
 	setTimeout(function(){
 	document.location.href = 'check.html';
-	}, 3000);
+	}, 2000);
 }
 </script>
 
@@ -26,10 +26,13 @@ function letsgo() {
 </div>
 
 <body>
-<div class="animated zoomIn">
-<p><img src="logo.png" width="200"></p>
-<p>&nbsp;</p>
-<button style="width:250px;" id="letsgo" onclick="letsgo();">Start</button>
+<div class="animated fadeInDown">
+<img src="logo.png" width="100%">
+<h1>Select Language</h1>
+
+<button style="width:200px;" onclick="localStorage.setItem('lang','eng');letsgo();">English</button>
+<button style="width:200px;" onclick="localStorage.setItem('lang','swa');letsgo();">Kiswahili</button>
+
 </div>
 </body>
 </html>

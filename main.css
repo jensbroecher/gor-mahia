@@ -1,25 +1,20 @@
 @charset "utf-8";
 body {
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: sans-serif;
 	font-size: 18px;
 	color: #000;
-	background-color: #E1F2FF;
+	background-color: #000000;
 	text-align: center;
+	margin: 0px;
+	padding: 0px;
 }
-.map {
-	width: 90%;
-	border: 5px solid #FFF;
-	box-shadow: 0 0 25px 1px rgba(0,0,0,0.3);
-	min-height: 250px;
-	background-image: url(282b.GIF);
+.soccerfield {
+	background-image: url(field.jpg);
 	background-repeat: no-repeat;
-	background-position: center center;	
-	background-size: 60px 60px;
+	background-size: 100% auto;
+	background-color: #387417;
 }
 
-#logos {
-	text-align: center;
-}
 
 button {
 	color: #000;
@@ -27,39 +22,31 @@ button {
 	text-align: center;
 	width: 100%;
 	display: block;
-	border: 2px solid #4285F4;
+	border: 3px solid #0A7A26;
 	-webkit-tap-highlight-color: rgba(0,0,0,0);
 	-webkit-tap-highlight-color: transparent;
 	transition: all 0.5s;
 	line-height: 250%;
-	margin-top: 5px;
-	margin-bottom: 5px;
+	margin-top: 10px;
+	margin-bottom: 10px;
 	margin-right: auto;
 	margin-left: auto;
+	border-radius: 6px;
 }
-#detailsfordb {
-	background-color: #E1F2FF;
-	height: 100%;
-	width: 90%;
-	position: absolute;
-	left: 0px;
-	top: 0px;
-	padding-left: 5%;
-	padding-right: 5%;
-	text-align: left;
-	font-size: 16px;
-	line-height: 200%;
-	color: #666;
+.eng, .swa {
+	display:none;	
 }
 h1 {
-	color: #FFF;
-	background-color: #0070C0;
+	color: #026334;
+	background-color: #FFFDFA;
 	text-align: center;
 	padding-top: 5px;
-	font-size: 16px;
-	font-weight: normal;
+	font-size: 14px;
+	font-weight: bold;
 	line-height: 100%;
 	padding-bottom: 5px;
+	font-family: sans-serif;
+	margin-bottom: 20px;
 }
 
 .textfield {
@@ -69,16 +56,6 @@ h1 {
 	font-size: 14px;
 	line-height: 200%;
 	text-indent: 5px;
-}
-.bigcheck {
-	width: auto;
-	display: inline;
-	margin-right: 5px;
-	font-size: 20px;
-	padding: 5px;
-}
-#getkptypes {
-	margin-top: 10px;
 }
 
 #loadingindicator {
@@ -91,6 +68,42 @@ h1 {
 	top: 0px;
 	text-align: center;
 }
+.infobox {
+	background-color: rgba(255,255,255,0.8);
+	border: 3px solid #0A7A26;
+	color: #0A7A26;
+	margin: 10px;
+	font-family: sans-serif;
+	font-weight: normal;
+	font-size: 15px;
+	padding-top: 20px;
+	padding-right: 10px;
+	padding-bottom: 20px;
+	padding-left: 10px;
+}
+.layerbox {
+	background-color: rgba(255,255,255,0.8);
+	border: 3px solid #0A7A26;
+	color: #0A7A26;
+	font-family: sans-serif;
+	font-weight: normal;
+	font-size: 15px;
+	padding-top: 20px;
+	padding-right: 4%;
+	padding-bottom: 20px;
+	padding-left: 4%;
+	position: absolute;
+	z-index: 1;
+	width: 82%;
+	top: 20px;
+	margin-left: 5%;
+	display: none;
+}
+.blur {
+	-webkit-filter: blur(5px); -moz-filter: blur(5px); -o-filter: blur(5px); -ms-filter: blur(5px); filter: blur(5px);
+	pointer-events: none;
+	opacity: 0.5;
+}
 #loadingindicator img {
 	margin-top: 100px;
 }
@@ -98,5 +111,5 @@ button:active {
   transition: all 0.5s;
 }
 button:focus {
-    outline: none;
+  outline: none;
 }

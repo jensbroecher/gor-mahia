@@ -1,0 +1,121 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link href="main.css" rel="stylesheet" type="text/css">
+<link href="animate.min.css" rel="stylesheet" type="text/css">
+
+<script type="text/javascript" src="jquery.min.js"></script>
+
+<script type="text/javascript">
+function showindicator() {
+document.getElementById("loadingindicator").className = "animated fadeIn";
+document.getElementById("loadingindicator").style.display = "block";
+}
+
+$( document ).ready(function() {
+setTimeout(function(){
+	document.getElementById("loadingindicator").style.display = "none";
+	}, 1000);
+	
+lang = localStorage.getItem('lang');
+if(lang == 'eng') {
+	$(".eng").removeClass("eng");
+}
+if(lang == 'swa') {
+	$(".swa").removeClass("swa");
+}
+});
+
+function loginwithnumberandpin() {
+	document.getElementById('loginwithnumberandpin').style.display = 'block';
+	document.getElementById("mainholder").className = "blur";
+}
+
+</script>
+
+</head>
+
+<div id="loadingindicator" class="animated fadeOut">
+<img src="282.gif" width="120">
+</div>
+
+<body class="soccerfield">
+
+<div id="mainholder">
+
+<div class="animated fadeInDown infobox">
+
+<span class="eng">
+Get registered as an official fan of Gor Mahia F.C. with a small contribution to the club and  access  news, live updates, player profiles, exclusive downloads, merchandise and more! + Plus enter  our online competitions with a chance to WIN!
+</span>
+<span class="swa">
+Kupata kusajiliwa kama shabiki rasmi ya Gor Mahia F.C. pamoja na mchango mdogo katika klabu na upatikanaji wa habari , updates kuishi, mchezaji maelezo , kipekee downloads, bidhaa na zaidi! + Plus kuingia mashindano wetu online na nafasi ya kushinda!
+</span>
+
+</div>
+
+<div class="animated fadeInLeft infobox">
+
+<span class="eng">
+Register as an official fan of Gor Mahia F.C.?
+</span>
+<span class="swa">
+Kujiandikisha kama shabiki rasmi ya Gor Mahia F.C. wa klabu?
+</span>
+
+<span class="eng">
+<button style="width:200px;" onclick="register();">Register</button>
+</span>
+<span class="swa">
+<button style="width:200px;" onclick="register();">Daftari</button>
+</span>
+
+<br>
+
+<span class="eng">
+Are you already registered as a fan?
+</span>
+<span class="swa">
+Je, tayari kusajiliwa kama shabiki?
+</span>
+
+<span class="eng">
+<button style="width:200px;" onclick="loginwithnumberandpin();">Login</button>
+</span>
+<span class="swa">
+<button style="width:200px;" onclick="loginwithnumberandpin();">Ingia</button>
+</span>
+
+</div>
+
+</div>
+
+<div id="loginwithnumberandpin" class="animated zoomIn layerbox">
+<span class="eng">
+Please enter your fan number and PIN.
+</span>
+<span class="swa">
+Tafadhali kuingia shabiki namba yako na PIN.
+</span>
+
+<span class="eng">
+<input type="text" class="textfield" placeholder="Fan number">
+</span>
+<span class="swa">
+<input type="text" class="textfield" placeholder="Shabiki idadi">
+</span>
+
+<input type="text" class="textfield" placeholder="PIN">
+
+<span class="eng">
+<button style="width:200px;" onclick="loginwithnumberandpingo();">Login</button>
+</span>
+<span class="swa">
+<button style="width:200px;" onclick="loginwithnumberandpingo();">Ingia</button>
+</span>
+
+</div>
+
+</body>
+</html>
