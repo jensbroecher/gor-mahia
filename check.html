@@ -83,6 +83,7 @@ Tafadhali kuingia shabiki namba yako na PIN.
 <span class="eng">
 <button style="width:200px;" onclick="loginwithnumberandpingo();">Login</button>
 </span>
+
 <span class="swa">
 <button style="width:200px;" onclick="loginwithnumberandpingo();">Ingia</button>
 </span>
@@ -96,16 +97,19 @@ Tafadhali kuingia shabiki namba yako na PIN.
 <span class="eng">
 Personal Details
 </span>
+
 <span class="swa">
 Maelezo ya Kibinafsi
 </span>
 
 <span class="eng">
+<form id="registernext_prep_eng" action="javascript:registernext();">
 <input type="text" class="textfield" required placeholder="First Name">
 <input type="text" class="textfield" required placeholder="Last Name">
 <input type="email" class="textfield" placeholder="E-Mail">
 <input type="tel" class="textfield" required placeholder="Phone">
-<button style="width:200px;" onclick="registernext();">Next</button>
+<button id="next1" style="width:200px;" onclick="registernext_prep_eng();">Next</button>
+</form>
 </span>
 
 </span>
@@ -115,25 +119,40 @@ Maelezo ya Kibinafsi
 <span class="eng">
 Personal Details
 </span>
+
 <span class="swa">
 Maelezo ya Kibinafsi
 </span>
 
+<span class="eng">
+<form id="registernext2_prep_eng" action="javascript:registernext2();">
 <select class="textfield" name="gender" required id="gender">
   <option value="M">Male</option>
   <option value="F">Female</option>
 </select>
-<input type="number" required class="textfield" placeholder="Age">
+<input type="text" required class="textfield" placeholder="Age">
 <input type="text" required class="textfield" placeholder="City">
 <button style="width:200px;" onclick="registerprev();">Previous</button>
-<button style="width:200px;" onclick="registernext2();">Next</button>
+<button id="next2" style="width:200px;" onclick="registernext2_prep_eng();">Next</button>
+</form>
+</span>
+
 </span>
 
 <span id="register3" class="animated fadeIn" style="display:none;">
+<span class="eng">
+<form id="complete_eng" action="javascript:complete_eng();">
 Please provide a 4-Digit PIN. It is used to login on other devices. Never share this PIN with anyone.
-<input type="number" max="4" required class="textfield" placeholder="PIN">
+<input name="pin" required class="textfield" id="pin" placeholder="PIN" oninput="maxLengthCheck(this)"
+type = "number"
+maxlength = "4"
+minlength = "4"
+min = "1"
+max = "9999">
 <button style="width:200px;" onclick="registerprev2();">Previous</button>
-<button style="width:200px;" onclick="registernext2();">Complete</button>
+<button style="width:200px;" onclick="complete_eng_prep();">Complete</button>
+</form>
+</span>
 </span>
 
 </div>
