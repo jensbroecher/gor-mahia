@@ -6,38 +6,12 @@
 <link href="animate.min.css" rel="stylesheet" type="text/css">
 
 <script type="text/javascript" src="jquery.min.js"></script>
-
-<script type="text/javascript">
-function showindicator() {
-document.getElementById("loadingindicator").className = "animated fadeIn";
-document.getElementById("loadingindicator").style.display = "block";
-}
-
-$( document ).ready(function() {
-setTimeout(function(){
-	document.getElementById("loadingindicator").style.display = "none";
-	}, 1000);
-	
-lang = localStorage.getItem('lang');
-if(lang == 'eng') {
-	$(".eng").removeClass("eng");
-}
-if(lang == 'swa') {
-	$(".swa").removeClass("swa");
-}
-});
-
-function loginwithnumberandpin() {
-	document.getElementById('loginwithnumberandpin').style.display = 'block';
-	document.getElementById("mainholder").className = "blur";
-}
-
-</script>
+<script type="text/javascript" src="screens.js"></script>
 
 </head>
 
 <div id="loadingindicator" class="animated fadeOut">
-<img src="282.gif" width="120">
+<img src="burnball.gif" width="40%">
 </div>
 
 <body class="soccerfield">
@@ -46,12 +20,10 @@ function loginwithnumberandpin() {
 
 <div class="animated fadeInDown infobox">
 
-<img src="soccer.gif" width="15%" style="float:left; padding-right:5px; padding-bottom:5px;">
-
 <span class="eng">
 Get registered as an <strong>official fan</strong> of<strong> Gor Mahia F.C.</strong> with a small contribution to the club and  access  news, live updates, player profiles, exclusive downloads, merchandise and more! + Plus enter  our online competitions with a chance to WIN! </span>
 <span class="swa">
-Kupata kusajiliwa kama shabiki rasmi wa <strong>Gor Mahia F.C.</strong> pamoja na mchango mdogo katika klabu na upatikanaji wa habari. Habari zinazo zipuka, mchezaji kupata maelezo rasmi Kipekee, kupakua, bidhaa  zaidi! + Kuingia mashindano yetu kwa mtandao, nakupata nafasi ya kushinda! </span>
+Kupata kusajiliwa kama shabiki rasmi wa <strong>Gor Mahia F.C.</strong> pamoja na mchango mdogo katika klabu na upatikanaji wa habari. Habari zinazo zipuka, mchezaji kupata maelezo rasmi Kipekee, kupakua na bidhaa  zaidi! + Kuingia mashindano yetu kwa mtandao, nakupata nafasi ya kushinda! </span>
 
 </div>
 
@@ -106,7 +78,7 @@ Tafadhali kuingia shabiki namba yako na PIN.
 <input type="text" class="textfield" placeholder="Shabiki idadi">
 </span>
 
-<input type="text" class="textfield" placeholder="PIN">
+<input type="number" class="textfield" placeholder="PIN">
 
 <span class="eng">
 <button style="width:200px;" onclick="loginwithnumberandpingo();">Login</button>
@@ -118,12 +90,53 @@ Tafadhali kuingia shabiki namba yako na PIN.
 </div>
 
 <div id="registeraccount" class="animated zoomIn layerbox">
+
+<span id="register1" class="animated fadeIn">
+
 <span class="eng">
 Personal Details
 </span>
 <span class="swa">
 Maelezo ya Kibinafsi
 </span>
+
+<span class="eng">
+<input type="text" class="textfield" required placeholder="First Name">
+<input type="text" class="textfield" required placeholder="Last Name">
+<input type="email" class="textfield" placeholder="E-Mail">
+<input type="tel" class="textfield" required placeholder="Phone">
+<button style="width:200px;" onclick="registernext();">Next</button>
+</span>
+
+</span>
+
+<span id="register2" class="animated fadeIn" style="display:none;">
+
+<span class="eng">
+Personal Details
+</span>
+<span class="swa">
+Maelezo ya Kibinafsi
+</span>
+
+<select class="textfield" name="gender" required id="gender">
+  <option value="M">Male</option>
+  <option value="F">Female</option>
+</select>
+<input type="number" required class="textfield" placeholder="Age">
+<input type="text" required class="textfield" placeholder="City">
+<button style="width:200px;" onclick="registerprev();">Previous</button>
+<button style="width:200px;" onclick="registernext2();">Next</button>
+</span>
+
+<span id="register3" class="animated fadeIn" style="display:none;">
+Please provide a 4-Digit PIN. It is used to login on other devices. Never share this PIN with anyone.
+<input type="number" max="4" required class="textfield" placeholder="PIN">
+<button style="width:200px;" onclick="registerprev2();">Previous</button>
+<button style="width:200px;" onclick="registernext2();">Complete</button>
+</span>
+
+</div>
 
 </body>
 </html>
