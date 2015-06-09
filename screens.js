@@ -52,25 +52,21 @@ var last_name_en = document.getElementById('last_name_en').value;
 var first_name_en = document.getElementById('first_name_en').value;
 
 alert('Data sent:\n\nfirst_name_en: '+first_name_en+'\nlast_name_en: '+last_name_en+'\nemail_en: '+email_en+'\nphone_en: '+phone_en+'\ngender_en: '+gender_en+'\ncity_en: '+city_en+'\npin_en: '+pin_en+'');
+
+$.get('http://enunua.com/gormahia/fan_number.php?pin_en='+pin_en+'&city_en='+city_en+'&gender_en='+gender_en+'&phone_en='+phone_en+'&email_en='+email_en+'&last_name_en='+last_name_en+'&first_name_en='+first_name_en+'', function(data) {
+  	alert('Sent');
+});
+
 }
 
 function registernext_prep_eng() {
-	var $myForm = $('#registernext_prep_eng')
-	if (!$myForm[0].checkValidity()) {
-    return;
-	}
+	
 }
 function registernext2_prep_eng() {
-	var $myForm2 = $('#registernext2_prep_eng')
-	if (!$myForm2[0].checkValidity()) {
-   	return;
-	}
+	
 }
 function complete_eng_prep() {
-	var $myForm3 = $('#complete_eng')
-	if (!$myForm3[0].checkValidity()) {
-   	return;
-	}
+	
 }
 
 function maxLengthCheck(object)
