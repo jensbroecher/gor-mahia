@@ -61,16 +61,29 @@ function register() {
 	document.getElementById('registeraccount').style.display = 'block';
 	document.getElementById("mainholder").className = "blur";
 }
-function askhowmuch() {
-var theamount = prompt("How much would you like to contribute to the team?", "");
+function isNumber(n) { return /^-?[\d.]+(?:e-?\d+)?$/.test(n); } 
 
-if (theamount != null) {
-    localStorage.setItem('amount',theamount);
-	contribution();
+function askhowmuch() {
+
+var valuefrompromt = prompt("How much would you like to contribute to the team?", "");
+while(valuefrompromt.length < 3){
+alert("Please enter at least 3 digits");
+valuefrompromt = prompt("How much would you like to contribute to the team?", "");
 }
+if ((valuefrompromt != 0) && (isNumber (valuefrompromt))) {
+localStorage.setItem('amount',valuefrompromt);
+contributiongo();
 }
+else if (!isNumber (valuefrompromt)) {
+alert("Please enter a number");
+}
+
+}
+
 function contribution() {
 	document.getElementById('contribution').style.display = 'block';
+}
+function contributiongo() {
 	complete_eng();
 }
 
