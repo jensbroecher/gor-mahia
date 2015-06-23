@@ -50,6 +50,7 @@ function registernext2() {
 	document.getElementById('register2').style.display = 'none';
 }
 function registerprev() {
+	document.getElementById('register3').style.display = 'none';
 	document.getElementById('register2').style.display = 'none';
 	document.getElementById('register1').style.display = 'block';
 }
@@ -99,3 +100,6 @@ function maxLengthCheck(object)
 function loginwithnumberandpingo() {
 	document.location.href = 'main/start.html';
 }
+
+
+

@@ -6,6 +6,7 @@
 <link href="animate.min.css" rel="stylesheet" type="text/css">
 
 <script type="text/javascript" src="jquery.min.js"></script>
+<script type="text/javascript" src="jquery.validate.min.js"></script>
 <script type="text/javascript" src="screens.js"></script>
 
 </head>
@@ -40,7 +41,7 @@ Kujiandikisha kama shabiki rasmi wa Gor Mahia F.C.?
 <button style="width:200px;" onclick="register();">Register</button>
 </span>
 <span class="swa">
-<button style="width:200px;" onclick="register();">Kusajiliwa</button>
+<button style="width:200px;" onclick="alert('Coming soon...');">Kusajiliwa</button>
 </span>
 
 <br>
@@ -56,7 +57,7 @@ Je, tayari kusajiliwa kama shabiki?
 <button style="width:200px;" onclick="loginwithnumberandpin();">Login</button>
 </span>
 <span class="swa">
-<button style="width:200px;" onclick="loginwithnumberandpin();">Ingia</button>
+<button style="width:200px;" onclick="alert('Coming soon...');">Ingia</button>
 </span>
 
 </div>
@@ -85,7 +86,7 @@ Tafadhali kuingia shabiki namba yako na PIN.
 </span>
 
 <span class="swa">
-<button style="width:200px;" onclick="loginwithnumberandpingo();">Ingia</button>
+<button style="width:200px;" onclick="alert('Coming soon...');">Ingia</button>
 </span>
 
 </div>
@@ -103,15 +104,30 @@ Maelezo ya Kibinafsi
 </span>
 
 <span class="eng">
-<form id="registernext_prep_eng" action="javascript:registernext();">
+<form id="registernext_step_1">
 
-<input id="first_name_en" type="text" class="textfield" required placeholder="First Name">
-<input id="last_name_en" type="text" class="textfield" required placeholder="Last Name">
-<input id="email_en" type="email" class="textfield" placeholder="E-Mail">
-<input id="phone_en" type="tel" class="textfield" required placeholder="Phone">
+<input name="first_name_en" id="first_name_en" type="text" class="textfield" required placeholder="First Name">
+<input name="last_name_en" id="last_name_en" type="text" class="textfield" required placeholder="Last Name">
+<input name="email_en" id="email_en" type="email" class="textfield" placeholder="E-Mail">
+<input name="phone_en" id="phone_en" type="tel" class="textfield" required placeholder="Phone">
 
 <button id="next1" style="width:200px;">Next</button>
 </form>
+
+<script type="text/javascript">
+$("#registernext_step_1").validate({
+		rules: {
+    phone_en: {
+      required: true,
+      number: true,
+	  minlength: 7
+    }
+  },
+  submitHandler: function(form) {
+    registernext();
+  }
+ });
+</script>
 </span>
 
 </span>
@@ -127,35 +143,66 @@ Maelezo ya Kibinafsi
 </span>
 
 <span class="eng">
-<form id="registernext2_prep_eng" action="javascript:registernext2();">
+<form id="registernext2_step2">
 
 <select class="textfield" name="gender" required id="gender_en">
   <option value="M">Male</option>
   <option value="F">Female</option>
 </select>
 
-<input id="age_en" type="text" required class="textfield" placeholder="Age">
-<input id="city_en" type="text" required class="textfield" placeholder="City">
+<input name="age_en" id="age_en" type="text" required class="textfield" placeholder="Age">
+<input name="city_en" id="city_en" type="text" required class="textfield" placeholder="City">
 
 <button style="width:200px;" onclick="registerprev();">Previous</button>
 <button id="next2" style="width:200px;">Next</button>
 </form>
+
+<script type="text/javascript">
+$("#registernext2_step2").validate({
+	rules: {
+    age_en: {
+      required: true,
+      number: true,
+	  minlength: 2
+    }
+  },
+  submitHandler: function(form) {
+    registernext2();
+  }
+ });
+</script>
+
 </span>
 
 </span>
 
 <span id="register3" class="animated fadeIn" style="display:none;">
 <span class="eng">
-<form id="complete_eng" action="javascript:complete_eng();">
+<form id="complete" action="javascript:complete_eng();">
 Please provide a 4-Digit PIN. It is used to login on other devices. Never share this PIN with anyone.
 <input type="tel" name="pin" required class="textfield" id="pin_en" placeholder="PIN" oninput="maxLengthCheck(this)"
  maxlength = "4"
  pattern=".{4,}">
 
-<button style="width:200px;" onclick="registerprev2();">Previous</button>
 <button style="width:200px;">Complete</button>
 By registering you agree to the terms & conditions.
 </form>
+
+<script type="text/javascript">
+$("#complete").validate({
+	rules: {
+    pin: {
+      required: true,
+      number: true,
+	  minlength: 4
+    }
+  },
+  submitHandler: function(form) {
+    complete_eng();
+  }
+ });
+</script>
+
 </span>
 </span>
 
