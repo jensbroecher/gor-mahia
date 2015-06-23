@@ -95,15 +95,8 @@ Tafadhali kuingia shabiki namba yako na PIN.
 
 <span id="register1" class="animated fadeIn">
 
-<span class="eng">
 Personal Details
-</span>
 
-<span class="swa">
-Maelezo ya Kibinafsi
-</span>
-
-<span class="eng">
 <form id="registernext_step_1">
 
 <input name="first_name_en" id="first_name_en" type="text" class="textfield" required placeholder="First Name">
@@ -128,21 +121,13 @@ $("#registernext_step_1").validate({
   }
  });
 </script>
-</span>
 
 </span>
 
 <span id="register2" class="animated fadeIn" style="display:none;">
 
-<span class="eng">
 Personal Details
-</span>
 
-<span class="swa">
-Maelezo ya Kibinafsi
-</span>
-
-<span class="eng">
 <form id="registernext2_step2">
 
 <select class="textfield" name="gender" required id="gender_en">
@@ -153,7 +138,7 @@ Maelezo ya Kibinafsi
 <input name="age_en" id="age_en" type="text" required class="textfield" placeholder="Age">
 <input name="city_en" id="city_en" type="text" required class="textfield" placeholder="City">
 
-<button style="width:200px;" onclick="registerprev();">Previous</button>
+<div class="button" style="width:200px;" onclick="registerprev();">Previous</div>
 <button id="next2" style="width:200px;">Next</button>
 </form>
 
@@ -174,16 +159,15 @@ $("#registernext2_step2").validate({
 
 </span>
 
-</span>
-
 <span id="register3" class="animated fadeIn" style="display:none;">
-<span class="eng">
+
 <form id="complete" action="javascript:complete_eng();">
 Please provide a 4-Digit PIN. It is used to login on other devices. Never share this PIN with anyone.
 <input type="tel" name="pin" required class="textfield" id="pin_en" placeholder="PIN" oninput="maxLengthCheck(this)"
  maxlength = "4"
  pattern=".{4,}">
 
+<div class="button" style="width:200px;" onclick="registerprev2();">Previous</div>
 <button style="width:200px;">Complete</button>
 By registering you agree to the terms & conditions.
 </form>
@@ -198,14 +182,25 @@ $("#complete").validate({
     }
   },
   submitHandler: function(form) {
-    complete_eng();
+    contribution();
   }
  });
 </script>
 
 </span>
-</span>
 
 </div>
+
+<div id="contribution" class="animated fadeIn" style="display:none;">
+Contribute to the team and become registered in the official Gor Mahia F.C. Fanclub!<br>
+<br>
+How much would you like to contribute? (Minimum KES 100)<br>
+<br>
+Contribution is valid for 6 Months after which it needs to be renewed.
+<br>
+<div class="contributionbutton" onClick="localStorage.setItem('amount','100');contribution();">KES 100</div>
+<div class="contributionbutton" onClick="askhowmuch();">Other amount</div>
+</div>
+
 </body>
 </html>
