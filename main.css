@@ -123,9 +123,8 @@ h1 {
 :-moz-placeholder { color: #000; }
 
 .blur {
-	-webkit-filter: blur(5px); -moz-filter: blur(5px); -o-filter: blur(5px); -ms-filter: blur(5px); filter: blur(5px);
 	pointer-events: none;
-	opacity: 0.5;
+	opacity: 0;
 }
 #loadingindicator img {
 	margin-top: 100px;

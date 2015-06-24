@@ -93,7 +93,7 @@ body {
 	background-image: url(../img/logo_on_dark.png);
 	top: 0px;
 	text-align: center;
-	background-color: #006634;
+	background-color: rgba(0, 102, 52, 0.84);
 	background-repeat: no-repeat;
 	background-size: auto 80%;
 	background-position: center center;
