@@ -162,7 +162,7 @@ body {
 /* Menu Button */
 
 .menu-btn {
-	width: 50px;
+	width: 40px;
 	padding: 10px;
 	color: #FFF;
 	text-align: center;
@@ -175,6 +175,7 @@ body {
 	position: fixed;
 	z-index: 200;
 	top: 0px;
+	left: 0px;
 }
 #settings-btn {
 	width: 50px;
