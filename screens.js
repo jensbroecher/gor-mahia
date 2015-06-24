@@ -76,6 +76,7 @@ contributiongo();
 }
 else if (!isNumber (valuefrompromt)) {
 alert("Please enter a number");
+askhowmuch();
 }
 
 }
