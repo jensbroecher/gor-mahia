@@ -54,7 +54,7 @@ h1 {
 	text-align: center;
 }
 #contribution {
-	background-color: #000;
+	background-color: #FFF;
 	position: absolute;
 	z-index: 10;
 	height: 100%;
@@ -64,7 +64,7 @@ h1 {
 	font-size: 14px;
 	background-image: url(img/GOR-MAHIA-CHAMPIONS.jpg);
 	background-repeat: no-repeat;
-	background-size: cover;
+	background-size: contain;
 }
 
 
