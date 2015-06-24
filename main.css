@@ -42,6 +42,12 @@ h1 {
 	line-height: 200%;
 	text-indent: 5px;
 }
+#logo {
+	background-image: url(img/clouds.gif);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+
 
 #loadingindicator {
 	background-color: #5E9A4C;
@@ -54,7 +60,7 @@ h1 {
 	text-align: center;
 }
 #contribution {
-	background-color: #FFF;
+	background-color: #000;
 	position: absolute;
 	z-index: 10;
 	height: 100%;

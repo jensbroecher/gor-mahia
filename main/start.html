@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>BUDUANI Music</title>
+        <title>Gor Mahia F.C.</title>
 
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
@@ -139,15 +139,15 @@ alert('Coming soon... Are you a Comedian? We would love to hear from you. Please
 		location.href = '#startscreen';
     });
 	
-	$("#useremail").load("http://kushirikiana.com/burudani/music/ajaxregistrationtest/validate/loaduseremail.php?username="+whatstheusername+"",function(responseTxt,statusTxt,xhr){
+	$("#useremail").load("http://enunua.com/gormahia/validate/loaduseremail.php?username="+whatstheusername+"",function(responseTxt,statusTxt,xhr){
     });
 	
-	$.get('http://kushirikiana.com/burudani/music/ajaxregistrationtest/validate/loadpaid.php?username='+whatstheusername+'', function(result) {
+	$.get('http://enunua.com/gormahia/validate/loadpaid.php?username='+whatstheusername+'', function(result) {
     $('#paidstatus').val(result);
 	localStorage.paidstatus = $('#paidstatus').val();
 	});
 	
-	$.get('http://kushirikiana.com/burudani/music/ajaxregistrationtest/validate/loadpaiddate.php?username='+whatstheusername+'', function(result) {
+	$.get('http://enunua.com/gormahia/validate/loadpaiddate.php?username='+whatstheusername+'', function(result) {
     $('#paiddatestatus').val(result);
 	localStorage.paiddatestatus = $('#paiddatestatus').val();
 	});
@@ -188,9 +188,9 @@ setTimeout(function(){document.getElementById('helpbox').style.display='none';},
     
 <table align="center" border="0" cellpadding="10">
   <tr>
-  	<td><img width="60"  src="img/facebook.png" onclick="navigator.app.loadUrl('http://kushirikiana.com/burudani/music/social/share_fb.html', { openExternal:true });"></td>
-    <td><img width="60"  src="img/twitter.png" onclick="navigator.app.loadUrl('http://kushirikiana.com/burudani/music/social/share_tw.html', { openExternal:true });"></td>
-    <td><img width="60"  src="img/mail.png" onclick="navigator.app.loadUrl('http://kushirikiana.com/burudani/music/social/share_em.php?username='+whatstheusername+'', { openExternal:true });"></td>
+  	<td><img width="60"  src="img/facebook.png" onclick="navigator.app.loadUrl('http://enunua.com/gormahia/social/share_fb.html', { openExternal:true });"></td>
+    <td><img width="60"  src="img/twitter.png" onclick="navigator.app.loadUrl('http://enunua.com/gormahia/social/share_tw.html', { openExternal:true });"></td>
+    <td><img width="60"  src="img/mail.png" onclick="navigator.app.loadUrl('http://enunua.com/gormahia/social/share_em.php?username='+whatstheusername+'', { openExternal:true });"></td>
   </tr>
 </table>
 
@@ -213,7 +213,7 @@ an active internet connection.</div></div>
     <img src="img/logo_on_dark.png" height="50">
     <div style="float:right">
     
-    <div onclick="
+    <div style="display:none;" onclick="
     document.getElementById('helpbox').style.display = 'block';
     document.getElementById('helpbox').className = 'animated fadeInDownBig';
     " class="topbarbutton">
