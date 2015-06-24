@@ -104,7 +104,7 @@ Personal Details
 <input name="email_en" id="email_en" type="email" class="textfield" placeholder="E-Mail">
 <input name="phone_en" id="phone_en" type="tel" class="textfield" required placeholder="Phone">
 
-<button id="next1" style="width:200px;">Next</button>
+<button id="next1">Next</button>
 </form>
 
 <script type="text/javascript">
@@ -138,8 +138,8 @@ Personal Details
 <input name="age_en" id="age_en" type="text" required class="textfield" placeholder="Age">
 <input name="city_en" id="city_en" type="text" required class="textfield" placeholder="City">
 
-<div class="button" style="width:200px;" onclick="registerprev();">Previous</div>
-<button id="next2" style="width:200px;">Next</button>
+<button type="button" onclick="registerprev();">Previous</button>
+<button id="next2">Next</button>
 </form>
 
 <script type="text/javascript">
@@ -167,8 +167,8 @@ Please provide a 4-Digit PIN. It is used to login on other devices. Never share 
  maxlength = "4"
  pattern=".{4,}">
 
-<div class="button" style="width:200px;" onclick="registerprev2();">Previous</div>
-<button style="width:200px;">Complete</button>
+<button type="button" onclick="registerprev2();">Previous</button>
+<button>Complete</button>
 By registering you agree to the terms & conditions.
 </form>
 
@@ -192,14 +192,11 @@ $("#complete").validate({
 </div>
 
 <div id="contribution" class="animated fadeIn" style="display:none;">
-Contribute to the team and become registered in the official Gor Mahia F.C. Fanclub!<br>
-<br>
-How much would you like to contribute? (Minimum KES 100)<br>
-<br>
-Contribution is valid for 6 Months after which it needs to be renewed.
-<br>
-<div class="contributionbutton" onClick="localStorage.setItem('amount','100');contributiongo();">KES 100</div>
-<div class="contributionbutton" onClick="askhowmuch();">Other amount</div>
+<div id="incontribution">
+
+<div class="contributionbutton" onClick="askhowmuch();">Contribute</div>
+
+</div>
 </div>
 
 </body>

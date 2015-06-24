@@ -65,10 +65,10 @@ function isNumber(n) { return /^-?[\d.]+(?:e-?\d+)?$/.test(n); }
 
 function askhowmuch() {
 
-var valuefrompromt = prompt("How much would you like to contribute to the team?", "");
+var valuefrompromt = prompt("Contribute to the team (Minimum KES 100) and become registered in the official Gor Mahia F.C. Fanclub! Contribution is valid for 6 Months after which it needs to be renewed.", "100");
 while(valuefrompromt.length < 3){
 alert("Please enter at least 3 digits");
-valuefrompromt = prompt("How much would you like to contribute to the team?", "");
+valuefrompromt = prompt("Contribute to the team (Minimum KES 100) and become registered in the official Gor Mahia F.C. Fanclub! Membership is valid for 6 Months after which it needs to be renewed.", "100");
 }
 if ((valuefrompromt != 0) && (isNumber (valuefrompromt))) {
 localStorage.setItem('amount',valuefrompromt);
@@ -82,6 +82,7 @@ alert("Please enter a number");
 
 function contribution() {
 	document.getElementById('contribution').style.display = 'block';
+	askhowmuch();
 }
 function contributiongo() {
 	complete_eng();
