@@ -92,6 +92,7 @@ body {
 	z-index: 100;
 	background-image: url(../img/mainbar.png);
 	top: 0px;
+	text-align: center;
 }
 .topbarbutton {
 	font-size: 10px;
@@ -167,10 +168,9 @@ body {
 	background-repeat: no-repeat;
 	height: 30px;
 	background-position: center center;
-	margin-top: -50px;
 	position: fixed;
-	top: 100px;
 	z-index: 200;
+	top: 0px;
 }
 #settings-btn {
 	width: 50px;
@@ -195,31 +195,6 @@ body {
 	z-index: 199;
 	top: 50px;
 	}
-#search-btn {
-	width: 50px;
-	padding: 10px;
-	color: #FFF;
-	text-align: center;
-	cursor: pointer;
-	background-image: url(../img/searchtop.png);
-	background-size: auto 65%;
-	background-repeat: no-repeat;
-	height: 30px;
-	background-position: center center;
-	z-index: 199;
-	margin-right: auto;
-	margin-left: auto;
-}
-#actionbar {
-	width: 100%;
-	height: 50px;
-	left: 0px;
-	top: 50px;
-	position: fixed;
-	background-image: url(../img/actionbar.png);
-	background-size: cover;
-	z-index: 100;
-}
 #loading {
 	margin-right: 2%;
 	margin-left: 2%;
