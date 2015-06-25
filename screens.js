@@ -44,6 +44,15 @@ function loginwithnumberandpin() {
 function registernext() {
 	document.getElementById('register2').style.display = 'block';
 	document.getElementById('register1').style.display = 'none';
+	
+	var email_en = document.getElementById('email_en').value;
+	
+	if (email_en) {
+    	
+	}
+	else  {
+		alert('You did not enter an E-Mail. You can register without, but you will not be able to recover your account trough E-Mail if you forget your PIN.');
+	}
 }
 function registernext2() {
 	document.getElementById('register3').style.display = 'block';
@@ -98,12 +107,13 @@ var city_en = document.getElementById('city_en').value;
 var gender_en = document.getElementById('gender_en').value;
 var phone_en = document.getElementById('phone_en').value;
 var email_en = document.getElementById('email_en').value;
+var age_en = document.getElementById('age_en').value;
 var last_name_en = document.getElementById('last_name_en').value;
 var first_name_en = document.getElementById('first_name_en').value;
 
 // alert('Data sent:\n\nfirst_name_en: '+first_name_en+'\nlast_name_en: '+last_name_en+'\nemail_en: '+email_en+'\nphone_en: '+phone_en+'\ngender_en: '+gender_en+'\ncity_en: '+city_en+'\npin_en: '+pin_en+'\nlong: '+long+'\nlat: '+lat+'\namount: '+amount+'');
 
-document.location.href='http://enunua.com/gormahia/fan_number.php?pin_en='+pin_en+'&city_en='+city_en+'&gender_en='+gender_en+'&phone_en='+phone_en+'&email_en='+email_en+'&last_name_en='+last_name_en+'&first_name_en='+first_name_en+'&lat='+lat+'&long='+long+'&amount='+amount+'';
+document.location.href='http://enunua.com/gormahia/fan_number.php?pin_en='+pin_en+'&city_en='+city_en+'&gender_en='+gender_en+'&phone_en='+phone_en+'&email_en='+email_en+'&age_en='+age_en+'&last_name_en='+last_name_en+'&first_name_en='+first_name_en+'&lat='+lat+'&long='+long+'&amount='+amount+'';
 
 }
 
