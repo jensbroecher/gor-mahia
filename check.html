@@ -41,8 +41,6 @@ Kujiandikisha kama shabiki rasmi wa Gor Mahia F.C.?
 
 <span class="eng">
 <button style="width:200px;" onclick="register();">Register</button>
-<button style="width:200px;" onclick="document.location.href = 'http://enunua.com/gormahia/payok.php';">Test</button>
-
 
 </span>
 <span class="swa">
@@ -60,6 +58,9 @@ Je, tayari kusajiliwa kama shabiki?
 
 <span class="eng">
 <button style="width:200px;" onclick="loginwithnumberandpin();">Login</button>
+
+<button style="width:200px;" onclick="document.location.href = 'http://enunua.com/gormahia/payok.php';">Generate</button>
+
 </span>
 <span class="swa">
 <button style="width:200px;" onclick="alert('Coming soon...');">Ingia</button>
@@ -150,7 +151,7 @@ Personal Details
   <option value="F">Female</option>
 </select>
 
-<input name="age_en" id="age_en" type="number" required class="textfield" placeholder="Age (Optional)">
+<input name="age_en" id="age_en" type="number" class="textfield" placeholder="Age (Optional)">
 <input name="city_en" id="city_en" type="text" required class="textfield" placeholder="City">
 
 <button type="button" onclick="registerprev();">Previous</button>
@@ -161,7 +162,7 @@ Personal Details
 $("#registernext2_step2").validate({
 	rules: {
     age_en: {
-      required: true,
+      required: false,
       number: true,
 	  minlength: 2
     }

@@ -106,8 +106,29 @@ var pin_en = document.getElementById('pin_en').value;
 var city_en = document.getElementById('city_en').value;
 var gender_en = document.getElementById('gender_en').value;
 var phone_en = document.getElementById('phone_en').value;
+
+
+
 var email_en = document.getElementById('email_en').value;
+
+if (email_en) {
+    	
+	}
+	else  {
+		var email_en = 'officialfanclub@gormahiafc.co.ke';
+	}
+
+
 var age_en = document.getElementById('age_en').value;
+
+if (age_en) {
+    	
+	}
+	else  {
+		var age_en = 'Unknown';
+	}
+
+
 var last_name_en = document.getElementById('last_name_en').value;
 var first_name_en = document.getElementById('first_name_en').value;
 
