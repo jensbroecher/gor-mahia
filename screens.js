@@ -2,8 +2,39 @@ function showindicator() {
 document.getElementById("loadingindicator").className = "animated fadeIn";
 document.getElementById("loadingindicator").style.display = "block";
 }
+function hideindicator() {
+document.getElementById("loadingindicator").className = "animated fadeOut";
+setTimeout(function(){
+document.getElementById("loadingindicator").style.display = "none";
+}, 1000);
+}
+
+function checkNetConnection(){
+ jQuery.ajaxSetup({async:true});
+ re="";
+ r=Math.round(Math.random() * 10000);
+ $.get("http://enunua.com/gormahia/on.php",{subins:r},function(d){
+
+ document.getElementById("offline").className = "animated fadeOut";
+setTimeout(function(){
+ document.getElementById('offline').style.display = 'none';
+}, 1000);
+
+ }).error(function(){
+  re=false;
+  
+  document.getElementById("offline").className = "animated fadeIn";
+  document.getElementById('offline').style.display = 'block';
+  
+ });
+ return re;
+}
 
 $( document ).ready(function() {
+	
+setInterval(function(){ 
+checkNetConnection();
+}, 3000);
 
   function success(position) {
     var latitude  = position.coords.latitude;
@@ -145,8 +176,73 @@ function maxLengthCheck(object)
   }
   
 function loginwithnumberandpingo() {
-	document.location.href = 'main/start.html';
+
+showindicator();
+
+loginfannumberormail = document.getElementById('loginfannumberormail').value;
+loginpin =  document.getElementById('loginpin').value;
+
+if(loginfannumberormail.indexOf('@') === -1)
+{
+isemail = 'No';	
+}
+else {
+isemail = 'Yes';	
+}
+	
+$.get( "http://enunua.com/gormahia/logincheck.php?isemail="+isemail+"&loginfannumberormail="+loginfannumberormail+"&loginpin="+loginpin+"", function( data ) {
+
+if(data == 'noemail')
+{
+alert('Your account is not associated with an E-Mail. Please login using your Fan-Number.');
+hideindicator();
+}
+else if(data == 'pin0')
+{
+alert('Sorry, you entered an incorrect PIN. Please try again or contact officialfanclub@gormahiafc.co.ke for assistance.');
+hideindicator();
+}
+else if(data == 'pin1')
+{
+gotocontentstart();
+}
+else
+{
+alert('Account not found. Please try again or contact officialfanclub@gormahiafc.co.ke for assistance.');	
+hideindicator();
 }
 
+});
 
+}
 
+function gotocontentstart() {
+
+if (isemail == 'No') {
+
+localStorage.setItem('activefan',loginfannumberormail);
+		
+var activefan = localStorage.getItem('activefan');
+alert('Welcome back Fan No #'+activefan+'');
+
+document.location.href = 'main/start.html?activefan='+activefan+'';
+localStorage.setItem('rememberuser','Yes');
+
+}
+
+else if (isemail == 'Yes') {
+		
+$.get( "http://enunua.com/gormahia/logincheckfannumberfromemail.php?loginfannumberormail="+loginfannumberormail+"", function( data ) {
+		
+localStorage.setItem('activefan',data);
+localStorage.setItem('rememberuser','Yes');
+		
+var activefan = localStorage.getItem('activefan');
+alert('Welcome back Fan No #'+activefan+'');
+
+document.location.href = 'main/start.html?activefan='+activefan+'';
+
+});
+		
+}
+}

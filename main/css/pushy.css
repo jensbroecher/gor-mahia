@@ -14,15 +14,11 @@
 	padding-top: 5px;
 	padding-bottom: 5px;
 	padding-left: 10px;
-	text-transform: uppercase;
 	font-family: sans-serif-condensed;
-}
-#useremail {
-	color: #FFF;
-	font-size: 12px;
-	font-weight: normal;
-	padding-left: 10px;
-	font-family: sans-serif-condensed;
+	background-color: rgba(0, 0, 0, 0.4);
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #FFF;
 }
 #signoutbutton {
 	color: #FFF;
@@ -33,15 +29,13 @@
 	width: 120px;
 	text-align: center;
 	text-transform: capitalize;
-	background-color: rgba(0, 0, 0, 0.4) !important;
+	background-color: rgba(0, 0, 0, 0.4);
 	font-weight: normal;
 	border-radius: 3px;
-	top: 60px;
+	top: 53px;
 	position: absolute;
 	left: 75px;
 }
-
-
 
 /*! Pushy - v0.9.1 - 2013-9-16
 * Pushy is a responsive off-canvas navigation menu using CSS transforms & transitions.
@@ -148,12 +142,4 @@
 .pushy ul img{
 	width: 30px;
 	margin-bottom: -8px;
-}
-
-/* Example Media Query */
-
-@media screen and (max-width: 768px){
-    .pushy{
-        font-size: 1.0em;
-    }
 }

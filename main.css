@@ -47,6 +47,28 @@ h1 {
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
 }
+#offline {
+	color: #000;
+	background-color: rgba(255,255,255,0.9);
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	display: none;
+	z-index: 1000000;
+	left: 0px;
+	top: 0px;
+}
+#offline img {
+	width: 30%;
+	margin-right: auto;
+	margin-bottom: 20px;
+	margin-left: auto;
+	margin-top: 20px;
+}
+#offline div {
+	color: #747474;
+	padding: 10px;
+}
 #fans {
 	background-image: url(img/fans.png);
 	background-repeat: no-repeat;
@@ -58,9 +80,18 @@ h1 {
 	bottom: 0px;
 	z-index: -1;
 }
-
-
-
+#fans2 {
+	background-image: url(img/fans2.png);
+	background-repeat: no-repeat;
+	height: 200px;
+	width: 100%;
+	padding-bottom: 0px;
+	position: absolute;
+	background-size: cover;
+	bottom: 0px;
+	z-index: -1;
+	display: none;
+}
 #loadingindicator {
 	background-color: #5E9A4C;
 	position: absolute;

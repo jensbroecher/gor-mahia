@@ -8,6 +8,7 @@
 
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/demo.css">
+        
         <!-- Pushy CSS -->
         <link rel="stylesheet" href="css/pushy.css">
         <link href="css/animate.css" rel="stylesheet" type="text/css">
@@ -15,145 +16,57 @@
         <!-- jQuery -->
         <script src="js/vendor/jquery-1.10.1.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
+        
         <!-- Modernizr -->
         <script src="js/vendor/modernizr.custom.71422.js"></script>
+        
         <script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="cookiescript.js"></script>
         <script type="text/javascript" src="cdv-plugin-parse.js"></script>
 
         
-        <script type="text/javascript" charset="utf-8">
+<script type="text/javascript" charset="utf-8">
 		
-		$.ajaxSetup({
-    beforeSend:function(){
+$.ajaxSetup({
+beforeSend:function(){
         // show gif here, eg:
         $("#loading").fadeIn();
-    },
-    complete:function(){
+},
+complete:function(){
         // hide gif here, eg:
         $("#loading").fadeOut();
-    }
+}
 });
- 
 
-
+function onDeviceReady() {
 		
-
-	
-	function getpaidstatus(){
-  if (document.paidstatus.value == "paid")
-      alert("Has been paid")
-  else
-      alert("The field contains the text: " + document.paidstatus.value)
-}
-	
-
-function free() {
-    localStorage.setItem("freeorpremium", "free");
-}
-function premium() {
-    localStorage.setItem("freeorpremium", "premium"); 
 }
 
-    function onDeviceReady() {
-		
-    }
-
- function checkonload() {
+function checkonload() {
     document.addEventListener("deviceready", onDeviceReady, false);
     document.addEventListener("online", onOnline, false);
     document.addEventListener("offline", onOffline, false);
 	   
-	     function onOnline() {
-		document.getElementById('offlinenotice').className = 'animated fadeOutUp';
-        setTimeout(function(){document.getElementById('offlinenotice').style.display='none';},1000);
-    }
+function onOnline() {
+	document.getElementById('offlinenotice').className = 'animated fadeOutUp';
+    setTimeout(function(){document.getElementById('offlinenotice').style.display='none';},1000);
+}
  
-    function onOffline() {
-        document.getElementById('offlinenotice').style.display='block';
-		document.getElementById('offlinenotice').className = 'animated fadeInDown';
-    }
+function onOffline() {
+    document.getElementById('offlinenotice').style.display='block';
+	document.getElementById('offlinenotice').className = 'animated fadeInDown';
+}
 	
-	location.href = '#home';
+location.href = '#home';
 	
 }
         
-    </script>
+</script>
     
-    <script>
-	
+<script>
 	
 $(document).ready(function(){
-		   
-  $("#loadshare").click(function(){
-    $("#div1").load("http://enunua.com/gormahia/news/news.php",function(responseTxt,statusTxt,xhr){
-		location.href = '#news';
-		$("html, body").animate({ scrollTop: 0 }, "slow");
-    });
-  });
-  
-   $("#settings-btn").click(function(){
-    $("#div1").load("settings.html",function(responseTxt,statusTxt,xhr){
-		location.href = '#settings';
-		$("html, body").animate({ scrollTop: 0 }, "slow");
-    });
-  });
-  
-     $("#charts").click(function(){
-    $("#div1").load("#",function(responseTxt,statusTxt,xhr){
-		location.href = '#charts';
-		$("html, body").animate({ scrollTop: 0 }, "slow");
-    });
-  });
-  
-       $("#whatshot").click(function(){
-    $("#div1").load("http://enunua.com/burudanimusic/featured/featured.php",function(responseTxt,statusTxt,xhr){
-		location.href = '#featured_artist';
-		$("html, body").animate({ scrollTop: 0 }, "slow");
-    });
-  });
-  
-       $("#videos").click(function(){
-    $("#div1").load("http://enunua.com/gormahia/videos/videos.php",function(responseTxt,statusTxt,xhr){
-		location.href = '#videos';
-		$("html, body").animate({ scrollTop: 0 }, "slow");
-    });
-  });
-  
-   $("#artists").click(function(){
-    $("#div1").load("http://enunua.com/burudanimusic/list.php",function(responseTxt,statusTxt,xhr){
-		location.href = '#artists';
-		$("html, body").animate({ scrollTop: 0 }, "slow");
-    });
-  });
-  
-   $("#djs").click(function(){
-alert('Coming soon... Are you a DJ? We would love to hear from you. Please contact us at info@burudani.club');
-  });
-  
-   $("#comedy").click(function(){
-alert('Coming soon... Are you a Comedian? We would love to hear from you. Please contact us at info@burudani.club');
-  });
-		
-	$("#div1").load("gosection.html",function(responseTxt,statusTxt,xhr){
-		location.href = '#startscreen';
-    });
-	
-	$("#useremail").load("http://enunua.com/gormahia/validate/loaduseremail.php?username="+whatstheusername+"",function(responseTxt,statusTxt,xhr){
-    });
-	
-	$.get('http://enunua.com/gormahia/validate/loadpaid.php?username='+whatstheusername+'', function(result) {
-    $('#paidstatus').val(result);
-	localStorage.paidstatus = $('#paidstatus').val();
-	});
-	
-	$.get('http://enunua.com/gormahia/validate/loadpaiddate.php?username='+whatstheusername+'', function(result) {
-    $('#paiddatestatus').val(result);
-	localStorage.paiddatestatus = $('#paiddatestatus').val();
-	});
 
 });
-
 
 </script>
 
@@ -182,15 +95,20 @@ setTimeout(function(){document.getElementById('helpbox').style.display='none';},
     
     <br>
     
-    <center>Share GOR MAHIA F.C. <br>
-			with your friends:
+    <center>Share with your friends:
     </center>
     
-<table align="center" border="0" cellpadding="10">
+<table align="center" border="0" cellpadding="5">
   <tr>
-  	<td><img width="60"  src="img/facebook.png" onclick="navigator.app.loadUrl('http://enunua.com/gormahia/social/share_fb.html', { openExternal:true });"></td>
-    <td><img width="60"  src="img/twitter.png" onclick="navigator.app.loadUrl('http://enunua.com/gormahia/social/share_tw.html', { openExternal:true });"></td>
-    <td><img width="60"  src="img/mail.png" onclick="navigator.app.loadUrl('http://enunua.com/gormahia/social/share_em.php?username='+whatstheusername+'', { openExternal:true });"></td>
+  
+<td><img width="50"  src="img/facebook.png" onclick="navigator.app.loadUrl('http://enunua.com/gormahia/social/share_fb.html', { openExternal:true });"></td>
+    
+<td><img width="50"  src="img/twitter.png" onclick="navigator.app.loadUrl('http://enunua.com/gormahia/social/share_tw.html', { openExternal:true });"></td>
+    
+<td><img width="50"  src="img/mail.png" onclick="navigator.app.loadUrl('http://enunua.com/gormahia/social/share_em.php?username='+whatstheusername+'', { openExternal:true });"></td>
+
+<td><img width="50"  src="img/mail.png" onclick="window.open('http://www.facebook.com', '_system');"></td>
+    
   </tr>
 </table>
 
@@ -204,14 +122,13 @@ setTimeout(function(){document.getElementById('sharebox').style.display='none';}
     <div onclick="
     document.getElementById('offlinenotice').style.display = 'none';" style="display:none" id="offlinenotice"><div style="padding:20px;">
     <img src="img/cloud.png" width="37%"> <br><br>
-Sorry, it appears that you are offline. BURUDANI MUSIC requires 
-an active internet connection.</div></div>
+Sorry, it appears that you are offline.</div></div>
  
 
     
     <div id="mainbar" class="animated fadeInDownBig">
 
-      <div style="float:right">
+    <div style="float:right">
     
     <div style="display:none;" onclick="
     document.getElementById('helpbox').style.display = 'block';
@@ -239,25 +156,22 @@ an active internet connection.</div></div>
 <div id="currentaccount">
 
 <div id="currentaccountuser">
-  <script>
-  document.write(localStorage.myname);
-  var whatstheusername = localStorage.getItem('myname');
+Fan No #<script>
+  document.write(localStorage.activefan);
   </script>
 </div>
   
-  <div id="useremail"></div>
-  
-  <div id="signoutbutton" onclick="localStorage.removeItem('myname');top.location.href='account.html'">logout</div>
+  <div id="signoutbutton" onclick="localStorage.removeItem('rememberuser');top.location.href='../check.html'">logout</div>
   
 </div>
             <ul>
-                <li><a href="#" id="loadshare">News & Articles</a></li>
-                <li><a href="#" id="x1">Live Updates</a></li>
-                <li><a href="#" id="x2">Fan-Shop</a></li>
-                <li><a href="#" id="x3">Squad</a></li>  
-                <li><a href="#" id="videos">Videos &amp; Pictures</a></li>
-                <li><a href="#" id="x4">Schedules</a></li>            
-                <li><a href="#" id="x5">Statistics</a></li>
+                <li><a href="#news" id="news">News & Articles</a></li>
+                <li><a href="#live" id="live">Live Updates</a></li>
+                <li><a href="#fanshop" id="fanshop">Fan-Shop</a></li>
+                <li><a href="#squad" id="squad">Squad</a></li>  
+                <li><a href="#videos" id="videos">Videos &amp; Pictures</a></li>
+                <li><a href="#calendar" id="calendar">Calendar</a></li>            
+                <li><a href="#statistics" id="statistics">Statistics</a></li>
                 
             </ul>
         </nav>
@@ -275,7 +189,7 @@ an active internet connection.</div></div>
 </div>
 
 <div id="container">
-	<div id="div1"></div>
+<div id="div1"></div>
 </div>
 
 <!-- Pushy JS -->
@@ -289,21 +203,40 @@ function checkHash(){
     if(window.location.hash != hash) { 
         hash = window.location.hash; 
         processHash(hash); 
-    } t=setTimeout("checkHash()",200); 
+    }
+t=setTimeout("checkHash()",200); 
 }
 
 function processHash(hash){
-  //  alert(hash);
-	if (hash == "#home") {
-	//	alert('home');
-	}
-	else if (hash == "#featured_artist") {
-	//	alert('featured artist');
-		$("#div1").load("http://enunua.com/burudanimusic/featured/featured.php",function(responseTxt,statusTxt,xhr){});
-	}
-	else if (hash == "#featured_artist_details") {
-	//	alert('featured artist details');
-	}
+
+if (hash == "#news") {
+$("html, body").animate({ scrollTop: 0 }, "slow");
+$("#div1").load("http://enunua.com/gormahia/news/news.php",function(responseTxt,statusTxt,xhr){});}
+
+else if (hash == "#live") {
+$("html, body").animate({ scrollTop: 0 }, "slow");
+$("#div1").load("http://enunua.com/gormahia/live.php",function(responseTxt,statusTxt,xhr){});}
+
+else if (hash == "#fanshop") {
+$("html, body").animate({ scrollTop: 0 }, "slow");
+$("#div1").load("http://enunua.com/gormahia/fanshop.php",function(responseTxt,statusTxt,xhr){});}
+
+else if (hash == "#squad") {
+$("html, body").animate({ scrollTop: 0 }, "slow");
+$("#div1").load("http://enunua.com/gormahia/squad.php",function(responseTxt,statusTxt,xhr){});}
+
+else if (hash == "#squad") {
+$("html, body").animate({ scrollTop: 0 }, "slow");
+$("#div1").load("http://enunua.com/gormahia/videos/videos.php",function(responseTxt,statusTxt,xhr){});}
+
+else if (hash == "#calendar") {
+$("html, body").animate({ scrollTop: 0 }, "slow");
+$("#div1").load("http://enunua.com/gormahia/calendar.php",function(responseTxt,statusTxt,xhr){});}
+
+else if (hash == "#statistics") {
+$("html, body").animate({ scrollTop: 0 }, "slow");
+$("#div1").load("http://enunua.com/gormahia/statistics.php",function(responseTxt,statusTxt,xhr){});}
+
 }
   
 </script>

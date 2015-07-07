@@ -16,6 +16,11 @@
 </div>
 
 <body class="soccerfield">
+
+<div id="offline" class="animated fadeIn">
+<img src="main/img/cloud.png">
+<div>Your are offline. This app requires an active internet connection.</div>
+</div>
       
 <div style="display:none;" onClick="plswaitweg()" id="waitpls"><p id="audio_position"></p></div>
 
@@ -57,9 +62,10 @@ Je, tayari kusajiliwa kama shabiki?
 </span>
 
 <span class="eng">
+
 <button style="width:200px;" onclick="loginwithnumberandpin();">Login</button>
 
-<button style="width:200px;" onclick="document.location.href = 'http://enunua.com/gormahia/payok.php';">Testing</button>
+<button style="width:200px; display:none;" onclick="document.location.href = 'http://enunua.com/gormahia/payok.php';">Testing</button>
 
 </span>
 <span class="swa">
@@ -72,28 +78,58 @@ Je, tayari kusajiliwa kama shabiki?
 
 <div id="loginwithnumberandpin" class="animated zoomIn layerbox">
 <span class="eng">
-Please enter your fan number and PIN.
+Login
 </span>
 <span class="swa">
 Tafadhali kuingia shabiki namba yako na PIN.
 </span>
 
-<span class="eng">
-<input type="text" class="textfield" placeholder="Fan number">
-</span>
 <span class="swa">
 <input type="text" class="textfield" placeholder="Shabiki idadi">
-</span>
 
-<input type="number" class="textfield" placeholder="PIN">
-
-<span class="eng">
-<button style="width:200px;" onclick="loginwithnumberandpingo();">Login</button>
-</span>
-
-<span class="swa">
 <button style="width:200px;" onclick="alert('Coming soon...');">Ingia</button>
 </span>
+
+<span class="eng">
+
+<form id="login_check">
+
+<input required id="loginfannumberormail" name="loginfannumberormail" type="text" class="textfield" placeholder="Fan-Number or E-Mail">
+
+<input style="width:90px; font-size:17px; text-align:center; margin-right:5px;" required id="loginpin" maxlength="4" name="loginpin" type="tel" class="textfield" placeholder="PIN">
+
+<button style="width:200px;">Login</button>
+
+</form>
+</span>
+
+<script type="text/javascript">
+$("#login_check").validate({
+	rules: {
+    loginfannumberormail: {
+      required: true
+    },
+	loginpin: {
+      required: true,
+	  number: true,
+	  minlength: 4,
+	  maxlength: 4
+    }
+  },
+  messages: {
+            loginfannumberormail: {
+                required: "Enter Fan-Number or E-Mail Address." },
+			loginpin: {
+                required: "Please enter your PIN.",
+				number: "PIN must be a number.",
+				minlength: "PIN must be 4 digits.",
+				maxlength: "PIN must be 4 digits." }
+            },
+  submitHandler: function(form) {
+    loginwithnumberandpingo();
+  }
+ });
+</script>
 
 </div>
 
