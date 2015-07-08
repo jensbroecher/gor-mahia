@@ -30,6 +30,10 @@ body {
 #helpelements {
 	text-align: center;	
 }
+#fandetails {
+	display: none;
+}
+
 #helpelements img {
 	border: 5px solid #000;
 	border-radius:5px;

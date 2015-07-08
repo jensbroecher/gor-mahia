@@ -56,7 +56,7 @@ function onOffline() {
 	document.getElementById('offlinenotice').className = 'animated fadeInDown';
 }
 	
-location.href = '#home';
+location.href = '#membership';
 	
 }
         
@@ -65,6 +65,23 @@ location.href = '#home';
 <script>
 	
 $(document).ready(function(){
+	
+var activefan = localStorage.getItem('activefan');
+	
+$("#fandetails").load("http://enunua.com/gormahia/loadfandetails.php?fannumber="+activefan+"",function(responseTxt,statusTxt,xhr){
+
+	
+$("#div1").load("http://enunua.com/gormahia/membership.php",function(responseTxt,statusTxt,xhr){
+var fan_details_first_name = document.getElementById('fan_details_first_name').innerHTML;
+var fan_details_last_name = document.getElementById('fan_details_last_name').innerHTML;
+
+document.getElementById('clubcardfanname').innerHTML = ""+fan_details_first_name+" "+fan_details_last_name+"";
+
+document.getElementById('clubcardfanid').innerHTML = "Member #"+localStorage.getItem('activefan')+"";
+
+});
+
+});
 
 });
 
@@ -161,10 +178,11 @@ Fan No #<script>
   </script>
 </div>
   
-  <div id="signoutbutton" onclick="localStorage.removeItem('rememberuser');top.location.href='../check.html'">logout</div>
+<div id="signoutbutton" onclick="localStorage.removeItem('rememberuser');top.location.href='../check.html'">logout</div>
   
 </div>
             <ul>
+            	<li><a href="#membership" id="membership">My Membership</a></li>
                 <li><a href="#news" id="news">News & Articles</a></li>
                 <li><a href="#live" id="live">Live Updates</a></li>
                 <li><a href="#fanshop" id="fanshop">Fan-Shop</a></li>
@@ -177,18 +195,16 @@ Fan No #<script>
         </nav>
       
 
-        <div class="site-overlay"></div>
+<div class="site-overlay"></div>
 
 <div id="menu-btn" class="menu-btn animated fadeIn" style="-webkit-animation-delay:1.5s;"></div>
-
-<input style="display:none" name="paidstatus" id="paidstatus" type="text" value="user has paid?">
-<input style="display:none" name="paiddatestatus" id="paiddatestatus" type="text" value="user has paid when?">
 
 <div id="loading">
 <div id="spinner"></div>
 </div>
 
 <div id="container">
+<div id="fandetails"></div>
 <div id="div1"></div>
 </div>
 
@@ -217,6 +233,10 @@ else if (hash == "#live") {
 $("html, body").animate({ scrollTop: 0 }, "slow");
 $("#div1").load("http://enunua.com/gormahia/live.php",function(responseTxt,statusTxt,xhr){});}
 
+else if (hash == "#membership") {
+$("html, body").animate({ scrollTop: 0 }, "slow");
+$("#div1").load("http://enunua.com/gormahia/membership.php",function(responseTxt,statusTxt,xhr){});}
+
 else if (hash == "#fanshop") {
 $("html, body").animate({ scrollTop: 0 }, "slow");
 $("#div1").load("http://enunua.com/gormahia/fanshop.php",function(responseTxt,statusTxt,xhr){});}
@@ -225,7 +245,7 @@ else if (hash == "#squad") {
 $("html, body").animate({ scrollTop: 0 }, "slow");
 $("#div1").load("http://enunua.com/gormahia/squad.php",function(responseTxt,statusTxt,xhr){});}
 
-else if (hash == "#squad") {
+else if (hash == "#videos") {
 $("html, body").animate({ scrollTop: 0 }, "slow");
 $("#div1").load("http://enunua.com/gormahia/videos/videos.php",function(responseTxt,statusTxt,xhr){});}
 
