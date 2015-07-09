@@ -12,7 +12,8 @@
         <!-- Pushy CSS -->
         <link rel="stylesheet" href="css/pushy.css">
         <link href="css/animate.css" rel="stylesheet" type="text/css">
-
+        
+        <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="../cordova.js"></script>
 
         <!-- jQuery -->
@@ -40,7 +41,7 @@ complete:function(){
 });
 
 document.addEventListener("deviceready", function(){
-
+    alert('Device ready');
 });
 
 function checkonload() {
