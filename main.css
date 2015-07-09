@@ -49,7 +49,7 @@ h1 {
 }
 #offline {
 	color: #000;
-	background-color: rgba(255,255,255,0.9);
+	background-color: #FFF;
 	height: 100%;
 	width: 100%;
 	position: absolute;
