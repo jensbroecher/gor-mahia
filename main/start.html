@@ -39,7 +39,9 @@ complete:function(){
 }
 });
 
-document.addEventListener("deviceready", onDeviceReady, false);
+document.addEventListener("deviceready", function(){
+    alert('Device ready');
+});
 
 function checkonload() {
     document.addEventListener("deviceready", onDeviceReady, false);

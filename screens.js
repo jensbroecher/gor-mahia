@@ -223,7 +223,7 @@ if (isemail == 'No') {
 localStorage.setItem('activefan',loginfannumberormail);
 		
 var activefan = localStorage.getItem('activefan');
-alert('Welcome back Fan No #'+activefan+'');
+// alert('Welcome back Fan No #'+activefan+'');
 
 document.location.href = 'main/start.html?activefan='+activefan+'';
 localStorage.setItem('rememberuser','Yes');
