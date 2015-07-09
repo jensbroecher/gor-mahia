@@ -12,6 +12,8 @@
         <!-- Pushy CSS -->
         <link rel="stylesheet" href="css/pushy.css">
         <link href="css/animate.css" rel="stylesheet" type="text/css">
+        
+        <script type="text/javascript" src="cordova.js"></script>
 
         <!-- jQuery -->
         <script src="js/vendor/jquery-1.10.1.min.js"></script>
@@ -19,8 +21,7 @@
         
         <!-- Modernizr -->
         <script src="js/vendor/modernizr.custom.71422.js"></script>
-        
-        <script type="text/javascript" src="cordova.js"></script>
+
         <script type="text/javascript" src="cdv-plugin-parse.js"></script>
         <script type="text/javascript" src="qrcode.min.js"></script>
 
@@ -38,9 +39,7 @@ complete:function(){
 }
 });
 
-function onDeviceReady() {
-		
-}
+document.addEventListener("deviceready", onDeviceReady, false);
 
 function checkonload() {
     document.addEventListener("deviceready", onDeviceReady, false);
@@ -137,7 +136,7 @@ setTimeout(function(){document.getElementById('helpbox').style.display='none';},
     
 <td><img width="50"  src="img/mail.png" onclick="navigator.app.loadUrl('http://enunua.com/gormahia/social/share_em.php?username='+whatstheusername+'', { openExternal:true });"></td>
 
-<td><img width="50"  src="img/mail.png" onclick="window.open('http://www.facebook.com', '_system');"></td>
+<td><img width="50"  src="img/whatsapp.png" onclick="window.open('http://www.facebook.com', '_system');"></td>
     
   </tr>
 </table>
@@ -188,7 +187,7 @@ Sorry, it appears that you are offline.</div></div>
 <div id="currentaccountuser">
 Member #<script>
   document.write(localStorage.activefan);
-  </script>
+</script>
 </div>
   
 <div id="signoutbutton" onclick="localStorage.removeItem('rememberuser');top.location.href='../check.html'">logout</div>
