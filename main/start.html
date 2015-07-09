@@ -12,8 +12,7 @@
         <!-- Pushy CSS -->
         <link rel="stylesheet" href="css/pushy.css">
         <link href="css/animate.css" rel="stylesheet" type="text/css">
-        
-        <script type="text/javascript" src="cordova.js"></script>
+
         <script type="text/javascript" src="../cordova.js"></script>
 
         <!-- jQuery -->
@@ -41,7 +40,7 @@ complete:function(){
 });
 
 document.addEventListener("deviceready", function(){
-    alert('Device ready');
+
 });
 
 function checkonload() {
@@ -133,13 +132,13 @@ setTimeout(function(){document.getElementById('helpbox').style.display='none';},
 <table align="center" border="0" cellpadding="5">
   <tr>
   
-<td><img width="50"  src="img/facebook.png" onclick="navigator.app.loadUrl('http://enunua.com/gormahia/social/share_fb.html', { openExternal:true });"></td>
+<td><img width="50"  src="img/facebook.png" onclick="navigator.app.loadUrl('http://enunua.com/gormahia/social/share_fb.php?activefan='+activefan+'', { openExternal:true });"></td>
     
-<td><img width="50"  src="img/twitter.png" onclick="navigator.app.loadUrl('http://enunua.com/gormahia/social/share_tw.html', { openExternal:true });"></td>
+<td><img width="50"  src="img/twitter.png" onclick="navigator.app.loadUrl('http://enunua.com/gormahia/social/share_tw.php?activefan='+activefan+'', { openExternal:true });"></td>
     
-<td><img width="50"  src="img/mail.png" onclick="navigator.app.loadUrl('http://enunua.com/gormahia/social/share_em.php?username='+whatstheusername+'', { openExternal:true });"></td>
+<td><img width="50"  src="img/mail.png" onclick="navigator.app.loadUrl('http://enunua.com/gormahia/social/share_em.php?activefan='+activefan+'', { openExternal:true });"></td>
 
-<td><img width="50"  src="img/whatsapp.png" onclick="window.open('http://www.facebook.com', '_system');"></td>
+<td><img width="50"  src="img/whatsapp.png" onclick="navigator.app.loadUrl('http://enunua.com/gormahia/social/share_ws.php?activefan='+activefan+'', { openExternal:true });"></td>
     
   </tr>
 </table>
