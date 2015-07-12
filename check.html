@@ -164,9 +164,9 @@ $("#registernext_step_1").validate({
     }
   },
   messages: {
-            phone_en: {
-                required: "Please enter a phone number.",
-                phone: "Please enter a phone number." }
+    phone_en: {
+      required: "Please enter a phone number.",
+      phone: "Please enter a phone number." }
             },
   submitHandler: function(form) {
     registernext();
@@ -187,7 +187,7 @@ Personal Details
   <option value="F">Female</option>
 </select>
 
-<input name="age_en" id="age_en" type="number" class="textfield" placeholder="Age (Optional)">
+<input name="age_en" id="age_en" type="date" class="textfield" placeholder="Date of birth (Optional)">
 <input name="city_en" id="city_en" type="text" required class="textfield" placeholder="City">
 
 <button type="button" onclick="registerprev();">Previous</button>
@@ -198,9 +198,7 @@ Personal Details
 $("#registernext2_step2").validate({
 	rules: {
     age_en: {
-      required: false,
-      number: true,
-	  minlength: 2
+      required: false
     }
   },
   submitHandler: function(form) {
