@@ -136,11 +136,18 @@ setTimeout(function(){document.getElementById('helpbox').style.display='none';},
 <table align="center" border="0" cellpadding="5">
   <tr>
   
+<script>
+function openemailsharing() {
+var activefan = localStorage.getItem('activefan');
+window.open('http://enunua.com/gormahia/social/share_em.php?fan='+activefan+'', '_system');
+}
+</script>
+  
 <td><img width="50"  src="img/facebook.png" onclick="navigator.app.loadUrl('http://enunua.com/gormahia/social/share_fb.html', { openExternal:true });"></td>
     
 <td><img width="50"  src="img/twitter.png" onclick="navigator.app.loadUrl('http://enunua.com/gormahia/social/share_tw.html', { openExternal:true });"></td>
     
-<td><img width="50"  src="img/mail.png" onclick="navigator.app.loadUrl('http://enunua.com/gormahia/social/share_em.php?activefan='+activefan+'', { openExternal:true });"></td>
+<td><img width="50"  src="img/mail.png" onclick="openemailsharing();"></td>
 
 <td><img width="50"  src="img/whatsapp.png" onclick="window.open('http://enunua.com/gormahia/social/share_wa.php', '_system');"></td>
     
