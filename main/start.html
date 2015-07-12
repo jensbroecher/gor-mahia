@@ -91,9 +91,12 @@ function membershipstart() {
 var fan_details_first_name = document.getElementById('fan_details_first_name').innerHTML;
 var fan_details_last_name = document.getElementById('fan_details_last_name').innerHTML;
 
+var fan_details_first_name = fan_details_first_name.toUpperCase();
+var fan_details_last_name = fan_details_last_name.toUpperCase();
+
 document.getElementById('clubcardfanname').innerHTML = ""+fan_details_first_name+" "+fan_details_last_name+"";
 
-document.getElementById('clubcardfanid').innerHTML = "Member #"+localStorage.getItem('activefan')+"";
+document.getElementById('clubcardfanid').innerHTML = "FAN #"+localStorage.getItem('activefan')+"";
 
 var qrcode = new QRCode("qrcode", {
 text: ""+localStorage.getItem('activefan')+" "+fan_details_first_name+" "+fan_details_last_name+"",
@@ -193,7 +196,7 @@ Sorry, it appears that you are offline.
 <div id="currentaccount">
 
 <div id="currentaccountuser">
-Member #<script>
+FAN #<script>
   document.write(localStorage.activefan);
 </script>
 </div>
