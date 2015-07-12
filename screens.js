@@ -247,7 +247,7 @@ localStorage.setItem('rememberuser','Yes');
 var activefan = localStorage.getItem('activefan');
 alert('Welcome back Fan No #'+activefan+'');
 
-document.location.href = 'main/start.html?activefan='+activefan+'';
+document.location.href = 'main/gotostart.html?activefan='+activefan+'';
 
 });
 		
