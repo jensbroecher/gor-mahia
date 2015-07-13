@@ -70,6 +70,7 @@ location.href = '#membership';
 $(document).ready(function(){
 	
 var activefan = localStorage.getItem('activefan');
+var rememberuser = localStorage.getItem('rememberuser');
 	
 $("#fandetails").load("http://enunua.com/gormahia/loadfandetails.php?fannumber="+activefan+"",function(responseTxt,statusTxt,xhr){
 
@@ -80,7 +81,8 @@ membershipstart();
 });
 
 function membershipstart() {
-	$("#div1").load("http://enunua.com/gormahia/membership.php",function(responseTxt,statusTxt,xhr){
+
+$("#div1").load("membership.html",function(responseTxt,statusTxt,xhr){
 var fan_details_first_name = document.getElementById('fan_details_first_name').innerHTML;
 var fan_details_last_name = document.getElementById('fan_details_last_name').innerHTML;
 
