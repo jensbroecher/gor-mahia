@@ -169,7 +169,7 @@ try {
 window.location.replace('http://enunua.com/gormahia/fan_number.php?pin_en='+pin_en+'&city_en='+city_en+'&gender_en='+gender_en+'&phone_en='+phone_en+'&email_en='+email_en+'&age_en='+age_en+'&last_name_en='+last_name_en+'&first_name_en='+first_name_en+'&lat='+lat+'&long='+long+'&amount='+amount+'');
 }
 catch(e) {
-    alert("Error: " + e.message);
+   // alert("Error: " + e.message);
 	return;
 }
 
@@ -232,8 +232,21 @@ localStorage.setItem('activefan',loginfannumberormail);
 var activefan = localStorage.getItem('activefan');
 // alert('Welcome back Fan No #'+activefan+'');
 
+$("#fandetails").load("http://enunua.com/gormahia/loadfandetails.php?fannumber="+activefan+"",function(responseTxt,statusTxt,xhr){
+
+var fan_details_first_name = document.getElementById('fan_details_first_name').innerHTML;
+var fan_details_last_name = document.getElementById('fan_details_last_name').innerHTML;
+
+var fan_details_first_name = fan_details_first_name.toUpperCase();
+var fan_details_last_name = fan_details_last_name.toUpperCase();
+
+localStorage.setItem('fan_details_first_name',fan_details_first_name);
+localStorage.setItem('fan_details_last_name',fan_details_last_name);
+
 document.location.href = 'main/gotostart.html?activefan='+activefan+'';
 localStorage.setItem('rememberuser','Yes');
+
+});
 
 }
 
@@ -245,9 +258,22 @@ localStorage.setItem('activefan',data);
 localStorage.setItem('rememberuser','Yes');
 		
 var activefan = localStorage.getItem('activefan');
-alert('Welcome back Fan No #'+activefan+'');
+
+$("#fandetails").load("http://enunua.com/gormahia/loadfandetails.php?fannumber="+activefan+"",function(responseTxt,statusTxt,xhr){
+
+var fan_details_first_name = document.getElementById('fan_details_first_name').innerHTML;
+var fan_details_last_name = document.getElementById('fan_details_last_name').innerHTML;
+
+var fan_details_first_name = fan_details_first_name.toUpperCase();
+var fan_details_last_name = fan_details_last_name.toUpperCase();
+
+localStorage.setItem('fan_details_first_name',fan_details_first_name);
+localStorage.setItem('fan_details_last_name',fan_details_last_name);
 
 document.location.href = 'main/gotostart.html?activefan='+activefan+'';
+localStorage.setItem('rememberuser','Yes');
+
+});
 
 });
 		

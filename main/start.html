@@ -83,12 +83,13 @@ membershipstart();
 function membershipstart() {
 
 $("#div1").load("membership.html",function(responseTxt,statusTxt,xhr){
-var fan_details_first_name = document.getElementById('fan_details_first_name').innerHTML;
-var fan_details_last_name = document.getElementById('fan_details_last_name').innerHTML;
+	
+var fan_details_first_name = localStorage.getItem('fan_details_first_name');
+var fan_details_last_name = localStorage.getItem('fan_details_last_name');
 
-var fan_details_first_name = fan_details_first_name.toUpperCase();
-var fan_details_last_name = fan_details_last_name.toUpperCase();
-
+alert(fan_details_first_name);
+alert(fan_details_last_name);
+	
 document.getElementById('clubcardfanname').innerHTML = ""+fan_details_first_name+" "+fan_details_last_name+"";
 
 document.getElementById('clubcardfanid').innerHTML = "FAN #"+localStorage.getItem('activefan')+"";
