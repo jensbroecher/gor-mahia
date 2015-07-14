@@ -29,26 +29,29 @@
         
 <script type="text/javascript" charset="utf-8">
 		
-$.ajaxSetup({
-beforeSend:function(){
-        // show gif here, eg:
-        $("#loading").fadeIn();
-},
-complete:function(){
-        // hide gif here, eg:
-        $("#loading").fadeOut();
-}
-});
+
 
 document.addEventListener("deviceready", function(){
     // alert('Device ready');
 });
 
-function checkonload() {
-    document.addEventListener("deviceready", onDeviceReady, false);
-    document.addEventListener("online", onOnline, false);
-    document.addEventListener("offline", onOffline, false);
-	   
+function checkNetConnection(){
+ jQuery.ajaxSetup({async:false});
+ re="";
+ r=Math.round(Math.random() * 10000);
+ $.get("http://enunua.com/gormahia/on.php",{subins:r},function(d){
+
+onOnline();
+
+ }).error(function(){
+  re=false;
+  
+onOffline();
+  
+ });
+ return re;
+}
+
 function onOnline() {
 	document.getElementById('offlinenotice').className = 'animated fadeOutUp';
     setTimeout(function(){document.getElementById('offlinenotice').style.display='none';},1000);
@@ -58,8 +61,14 @@ function onOffline() {
     document.getElementById('offlinenotice').style.display='block';
 	document.getElementById('offlinenotice').className = 'animated fadeInDown';
 }
+
+function checkonload() {
 	
 location.href = '#membership';
+
+setInterval(function(){ 
+checkNetConnection();
+}, 3000);
 	
 }
         
@@ -71,6 +80,16 @@ $(document).ready(function(){
 	
 var activefan = localStorage.getItem('activefan');
 var rememberuser = localStorage.getItem('rememberuser');
+
+// alert(rememberuser);
+
+if (rememberuser == null) {
+	alert('We could not load your profile. Please log in again!');
+	document.location.href = '../check.html';
+}
+else if (rememberuser != null) {
+	
+}
 	
 $("#fandetails").load("http://enunua.com/gormahia/loadfandetails.php?fannumber="+activefan+"",function(responseTxt,statusTxt,xhr){
 
@@ -81,14 +100,20 @@ membershipstart();
 });
 
 function membershipstart() {
+	
+$("#loading").fadeIn();
+	
+var rememberuser = localStorage.getItem('rememberuser');
 
 $("#div1").load("membership.html",function(responseTxt,statusTxt,xhr){
+	
+$("#loading").fadeOut();
 	
 var fan_details_first_name = localStorage.getItem('fan_details_first_name');
 var fan_details_last_name = localStorage.getItem('fan_details_last_name');
 
-alert(fan_details_first_name);
-alert(fan_details_last_name);
+// alert(fan_details_first_name);
+// alert(fan_details_last_name);
 	
 document.getElementById('clubcardfanname').innerHTML = ""+fan_details_first_name+" "+fan_details_last_name+"";
 
@@ -253,11 +278,17 @@ function processHash(hash){
 
 if (hash == "#news") {
 $("html, body").animate({ scrollTop: 0 }, "slow");
-$("#div1").load("http://enunua.com/gormahia/news/news.php",function(responseTxt,statusTxt,xhr){});}
+$("#loading").fadeIn();
+$("#div1").load("http://enunua.com/gormahia/news/news.php",function(responseTxt,statusTxt,xhr){
+$("#loading").fadeOut();
+});}
 
 else if (hash == "#live") {
 $("html, body").animate({ scrollTop: 0 }, "slow");
-$("#div1").load("http://enunua.com/gormahia/live.php",function(responseTxt,statusTxt,xhr){});}
+$("#loading").fadeIn();
+$("#div1").load("http://enunua.com/gormahia/live.php",function(responseTxt,statusTxt,xhr){
+$("#loading").fadeOut();
+});}
 
 else if (hash == "#membership") {
 membershipstart();
@@ -273,15 +304,24 @@ $("#div1").load("http://enunua.com/gormahia/squad.php",function(responseTxt,stat
 
 else if (hash == "#videos") {
 $("html, body").animate({ scrollTop: 0 }, "slow");
-$("#div1").load("http://enunua.com/gormahia/videos/videos.php",function(responseTxt,statusTxt,xhr){});}
+$("#loading").fadeIn();
+$("#div1").load("http://enunua.com/gormahia/videos/videos.php",function(responseTxt,statusTxt,xhr){
+$("#loading").fadeOut();
+});}
 
 else if (hash == "#calendar") {
 $("html, body").animate({ scrollTop: 0 }, "slow");
-$("#div1").load("http://enunua.com/gormahia/calendar.php",function(responseTxt,statusTxt,xhr){});}
+$("#loading").fadeIn();
+$("#div1").load("http://enunua.com/gormahia/calendar.php",function(responseTxt,statusTxt,xhr){
+$("#loading").fadeOut();
+});}
 
 else if (hash == "#statistics") {
 $("html, body").animate({ scrollTop: 0 }, "slow");
-$("#div1").load("http://enunua.com/gormahia/statistics.php",function(responseTxt,statusTxt,xhr){});}
+$("#loading").fadeIn();
+$("#div1").load("http://enunua.com/gormahia/statistics.php",function(responseTxt,statusTxt,xhr){
+$("#loading").fadeOut();
+});}
 
 }
   
