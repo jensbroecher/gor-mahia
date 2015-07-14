@@ -10,7 +10,7 @@ document.getElementById("loadingindicator").style.display = "none";
 }
 
 function checkNetConnection(){
- jQuery.ajaxSetup({async:false});
+ jQuery.ajaxSetup({async:true});
  re="";
  r=Math.round(Math.random() * 10000);
  $.get("http://enunua.com/gormahia/on.php",{subins:r},function(d){
