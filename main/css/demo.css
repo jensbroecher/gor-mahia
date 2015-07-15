@@ -40,19 +40,18 @@ body {
 }
 #offlinenotice {
 	background-color: rgba(255, 255, 255, 0.9);
-	margin-right: 2%;
-	margin-left: 2%;
+	margin-right: 20%;
+	margin-left: 20%;
 	position: fixed;
 	z-index: 9999999999;
-	display: none;
-	width: 96%;
+	width: 60%;
 	box-shadow: 1px 1px 6px 1px rgba(0,0,0,0.5);
-	top: 140px;
-	padding-bottom: 10px;
+	padding-bottom: 5px;
 	font-weight: normal;
 	color: #000;
 	text-align: center;
-	padding-top: 10px;
+	padding-top: 5px;
+	display: none;
 }
 #sharebox {
 	background-color: rgba(255, 255, 255, 0.9);
