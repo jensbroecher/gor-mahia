@@ -168,6 +168,12 @@ document.getElementById('waitpls').style.display = "none";
 
 <body onLoad="playAudio('http://enunua.com/gormahia/kogalo.mp3');plswait();">
 
+<div id="fortablets">
+<img src="logo_wide.png" width="100%">
+<br><br>
+<button onclick="localStorage.setItem('lang','eng');letsgo();">Start</button>
+</div>
+
 <div id="loadingindicator" style="display:none">
 <img src="burnball.gif" width="40%">
 </div>
@@ -177,7 +183,7 @@ document.getElementById('waitpls').style.display = "none";
 <img id="logo" src="logo.png" width="100%">
 <h1 style="display:none;">Select Language</h1>
 
-<button onclick="localStorage.setItem('lang','eng');letsgo();">Start</button>
+<button id="startbutton" onclick="localStorage.setItem('lang','eng');letsgo();">Start</button>
 <button style="display:none;" onclick="localStorage.setItem('lang','swa');letsgo();">Kiswahili</button>
 
 

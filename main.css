@@ -33,7 +33,6 @@ h1 {
 	font-family: sans-serif;
 	margin-bottom: 10px;
 }
-
 .textfield {
 	border: 1px solid #999;
 	width: 100%;
@@ -115,8 +114,6 @@ h1 {
 	background-repeat: no-repeat;
 	background-size: contain;
 }
-
-
 .infobox {
 	background-color: rgba(255,255,255,0.8);
 	border: 3px solid #0A7A26;
@@ -186,4 +183,50 @@ button:active {
 }
 button:focus {
   outline: none;
+}
+@media screen and (max-width: 600px){
+#fortablets {
+	display:none;
+}
+}
+@media screen and (min-width: 600px){
+#logo, #startbutton {
+	display:none;
+}
+.infobox, .layerbox {
+	width: 50%;
+	margin-right: 20%;
+	margin-left: 20%;
+	padding: 5%;
+}
+.soccerfield {
+	background-image: url(img/Soccer_field.svg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-color: #387417;
+}
+#fortablets {
+	display: block;
+	z-index: 10;
+	position: absolute;
+}
+#fans {
+	background-image: url(img/fans.png);
+	background-repeat: no-repeat;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	background-size: cover;
+	z-index: -1;
+}
+#fans2 {
+	background-image: url(img/fans2.png);
+	background-repeat: no-repeat;
+	height: 100%;
+	width: 100%;
+	background-size: cover;
+	bottom: 0px;
+	z-index: -1;
+	display: none;
+}
 }
