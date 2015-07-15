@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  
+<script src="jquery.js"></script>
+<script src="../../cordova.js"></script>
+<script src="../../js/plugins/Wallpaper.js"></script>
+
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="slicknav.css">
+
+<script src="modernizr.min.js"></script>
+
+<script>
+
+document.addEventListener("deviceready", onDeviceReady, false);
+
+function onDeviceReady() {
+	alert('Ready');
+}
+
+function hidewhite() {
+	setTimeout(function(){document.getElementById("whitelayer").style.display = 'none';},3000);
+};
+
+</script>
+
+
+<link href="animate.css" rel="stylesheet" type="text/css">
+
+
+<script type="text/javascript" language="javascript">
+<!--
+function goToPage(page) {
+	window.location = page;
+}
+//-->
+</script>
+
+</head>
+
+<body>
+
+
+<ul id="menu">
+    <li>Smartphone
+      <ul>
+
+<li><a 
+onClick="$('#loadpics').load('http://enunua.com/dagouimg/viewpics.php?device=Smartphone&category=Nature',function(responseTxt,statusTxt,xhr){});hidwhite();">Nature</a>
+</li>
+
+<li><a 
+onClick="$('#loadpics').load('http://enunua.com/dagouimg/viewpics.php?device=Smartphone&category=Insects',function(responseTxt,statusTxt,xhr){});hidwhite();">Insects</a>
+</li>
+
+<li><a 
+onClick="$('#loadpics').load('http://enunua.com/dagouimg/viewpics.php?device=Smartphone&category=Flowers',function(responseTxt,statusTxt,xhr){});hidwhite();">Flowers</a>
+</li>
+
+<li><a 
+onClick="$('#loadpics').load('http://enunua.com/dagouimg/viewpics.php?device=Smartphone&category=Animals',function(responseTxt,statusTxt,xhr){});hidwhite();">Animals</a>
+</li>
+        </ul>
+    </li>
+    
+    
+     <li>Tablet
+        <ul>
+
+<li><a 
+onClick="$('#loadpics').load('http://enunua.com/dagouimg/viewpics.php?device=Tablet&category=Animals',function(responseTxt,statusTxt,xhr){});hidwhite();">Animals</a>
+</li>
+
+<li><a 
+onClick="$('#loadpics').load('http://enunua.com/dagouimg/viewpics.php?device=Tablet&category=City',function(responseTxt,statusTxt,xhr){});hidwhite();">City</a>
+</li>
+
+<li><a 
+onClick="$('#loadpics').load('http://enunua.com/dagouimg/viewpics.php?device=Tablet&category=Flowers',function(responseTxt,statusTxt,xhr){});hidwhite();">Flowers</a>
+</li>
+
+        </ul>
+    </li>
+    
+    
+ 
+</ul>
+
+
+<div id="loadpics" class="">
+<center>
+<br>
+<br>
+<br>
+<br>
+<img class="animated bounceIn" src="logo.png" width="70%">
+</center>
+</div>
+<div style="clear:both;"></div>
+
+<br>
+<br>
+<br>
+
+
+<script src="jquery.slicknav.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$('#menu').slicknav({
+        closeOnClick:true
+      });
+});
+</script>
+
+</body>
+</html>

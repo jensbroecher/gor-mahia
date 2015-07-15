@@ -1,0 +1,54 @@
+* {
+-webkit-tap-highlight-color: rgba(0,0,0,0);
+-webkit-tap-highlight-color: transparent; /* For some Androids */
+outline: none;
+}
+body {
+	font-family: Helvetica, Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+	font-size: 100%;
+	background-color: #000;
+	background-image: url(bokeh.png);
+	background-repeat: no-repeat;
+	background-position: center top;
+	background-size: 100% auto;
+}
+.whitelayer {
+	background-color: #000;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	z-index: 1;
+	color: #440002;
+	margin-right: auto;
+	margin-left: auto;
+}
+#loadpics {
+	margin-top: 10px;
+}
+.blurred {
+	-webkit-filter: blur(10px);
+}
+
+.slicknav_menu {
+	display: none;
+	position: absolute;
+	z-index: 1000;
+	top: 10px;
+	right: 10px;
+}
+
+	.js #menu {
+	display: none;
+	}
+	
+	.js .slicknav_menu {
+		display:block;
+	}
+
+@media screen and (max-width: 40em) {
+
+}
