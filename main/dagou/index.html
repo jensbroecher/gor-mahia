@@ -19,7 +19,7 @@
 document.addEventListener("deviceready", onDeviceReady, false);
 
 function onDeviceReady() {
-	// alert('Ready');
+$('#loadpics').load('http://enunua.com/gormahia/dagouimg/viewpics.php?device=Smartphone&category=Team',function(responseTxt,statusTxt,xhr){});hidwhite();
 }
 
 function hidewhite() {
@@ -46,44 +46,14 @@ function goToPage(page) {
 
 <div id="mainbar" class="animated fadeIn"></div>
 
-<ul id="menu">
 
-<li><a onClick="$('#loadpics').load('http://enunua.com/gormahia/dagouimg/viewpics.php?device=Smartphone&category=Team',function(responseTxt,statusTxt,xhr){});hidwhite();">Smartphone</a>
-</li>
+<div id="loadpics" class=""></div>
 
-<li><a onClick="$('#loadpics').load('http://enunua.com/gormahia/dagouimg/viewpics.php?device=Tablet&category=Team',function(responseTxt,statusTxt,xhr){});hidwhite();">Tablet</a>
-</li>    
- 
-</ul>
-
-
-<div id="loadpics" class="">
-<center>
-<br>
-<br>
-<br>
-<br>
-<img class="animated bounceIn" src="../../icon.png" width="60%" style="max-width:300px;">
-<br>
-<br>
-<h1>Wallpapers</h1>
-</center>
-</div>
 <div style="clear:both;"></div>
 
 <br>
 <br>
 <br>
-
-
-<script src="jquery.slicknav.js"></script>
-<script type="text/javascript">
-$(document).ready(function(){
-	$('#menu').slicknav({
-        closeOnClick:true
-      });
-});
-</script>
 
 </body>
 </html>

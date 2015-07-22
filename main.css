@@ -5,8 +5,11 @@ body {
 	color: #000;
 	background-color: #006534;
 	text-align: center;
-	margin: 0px;
 	padding: 0px;
+	margin-top: 70px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
 }
 .soccerfield {
 	background-image: url(field.jpg);
@@ -183,6 +186,19 @@ button:active {
 }
 button:focus {
   outline: none;
+}
+#mainbar {
+	height: 50px;
+	width: 100%;
+	position: fixed;
+	z-index: 100;
+	background-image: url(main/img/logo_on_dark.png);
+	top: 0px;
+	text-align: center;
+	background-color: rgba(0, 102, 52, 0.84);
+	background-repeat: no-repeat;
+	background-size: auto 80%;
+	background-position: center center;
 }
 @media screen and (max-width: 600px){
 #fortablets {
