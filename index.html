@@ -6,6 +6,7 @@
 <link href="animate.min.css" rel="stylesheet" type="text/css">
 
 <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+<script type="text/javascript" src="cdv-plugin-parse.js"></script>
 
 <script type="text/javascript" charset="utf-8" src="jquery.min.js"></script>
 
@@ -159,6 +160,39 @@ document.getElementById('waitpls').style.display = "none";
 }
 
 
+function init () {
+	
+	// alert('wurdegeladen');
+	
+		parsePlugin.initialize('6u2OLfC9gatc1DiFaekuHequHPMP5mnqAzSa7wt1','L3xdx1QgnH4uaERxnuQb388WrVEf4QAQK0hxUgkq', function() {
+
+    parsePlugin.subscribe('gormahia_all', function() {
+
+        parsePlugin.getInstallationId(function(id) {
+
+            /**
+             * Now you can construct an object and save it to your own services, or Parse, and corrilate users to parse installations
+             * 
+             var install_data = {
+                installation_id: id,
+                channels: ['SampleChannel']
+             }
+             *
+             */
+
+        }, function(e) {
+            alert('error');
+        });
+
+    }, function(e) {
+        alert('error');
+    });
+
+}, function(e) {
+    alert('error');
+});	
+
+} 
 
 
 
@@ -166,7 +200,7 @@ document.getElementById('waitpls').style.display = "none";
 
 </head>
 
-<body onLoad="playAudio('http://enunua.com/gormahia/kogalo.mp3');plswait();">
+<body onLoad="playAudio('http://enunua.com/gormahia/kogalo.mp3');plswait();init();">
 
 <div id="fortablets">
 <img src="logo_wide.png" width="100%">
