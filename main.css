@@ -12,7 +12,7 @@ body {
 	margin-left: 0px;
 }
 .soccerfield {
-	background-image: url(field.jpg);
+	background-image: url(Soccer_ball_animated.svg);
 	background-repeat: no-repeat;
 	background-size: 100% auto;
 	background-color: #387417;
@@ -145,7 +145,7 @@ h1 {
 	position: absolute;
 	z-index: 1;
 	width: 82%;
-	top: 20px;
+	top: 70px;
 	margin-left: 5%;
 	display: none;
 }
