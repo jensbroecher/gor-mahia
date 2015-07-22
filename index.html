@@ -12,6 +12,16 @@
 
 <script type="text/javascript">
 
+function onLoad() {
+        document.addEventListener("deviceready", onDeviceReady, false);
+    }
+
+    // Cordova is loaded and it is now safe to make calls Cordova methods
+    //
+    function onDeviceReady() {
+        init();
+    }
+
 $( document ).ready(function() {
 var rememberuser = localStorage.getItem('rememberuser');
 
@@ -160,9 +170,9 @@ document.getElementById('waitpls').style.display = "none";
 }
 
 
-function init () {
+function init() {
 	
-	// alert('wurdegeladen');
+alert('wurdegeladen');
 	
 		parsePlugin.initialize('6u2OLfC9gatc1DiFaekuHequHPMP5mnqAzSa7wt1','L3xdx1QgnH4uaERxnuQb388WrVEf4QAQK0hxUgkq', function() {
 
@@ -200,7 +210,7 @@ function init () {
 
 </head>
 
-<body onLoad="playAudio('http://enunua.com/gormahia/kogalo.mp3');plswait();init();">
+<body onLoad="playAudio('http://enunua.com/gormahia/kogalo.mp3');plswait();">
 
 <div id="fortablets">
 <img src="logo_wide.png" width="100%">
