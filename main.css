@@ -6,16 +6,23 @@ body {
 	background-color: #006534;
 	text-align: center;
 	padding: 0px;
-	margin-top: 70px;
+	margin-top: 0px;
 	margin-right: 0px;
 	margin-bottom: 0px;
 	margin-left: 0px;
 }
-.soccerfield {
-	background-image: url(Soccer_ball_animated.svg);
+.soccerfieldhtml {
+	background-image: url(5106740833_f977acc82b_b.jpg);
+	background-size: 100% 100%;
 	background-repeat: no-repeat;
-	background-size: 100% auto;
-	background-color: #387417;
+	height: 100%;
+}
+.soccerfield {
+	background-image: url(img/soccer.gif);
+	background-repeat: no-repeat;
+	background-size: 40% auto;
+	background-position: center center;
+	background-color: transparent !important;
 }
 select {
 	padding-top: 6px;
