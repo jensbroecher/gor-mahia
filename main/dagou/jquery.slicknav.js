@@ -7,7 +7,7 @@
     var
     // default settings object.
         defaults = {
-            label: 'MENU',
+            label: '',
             duplicate: true,
             duration: 200,
             easingOpen: 'swing',
@@ -16,7 +16,7 @@
             openedSymbol: '&#9660;',
             prependTo: 'body',
             parentTag: 'a',
-            closeOnClick: false,
+            closeOnClick: true,
             allowParentLinks: false,
             nestedParentLinks: true,
             showChildren: false,
