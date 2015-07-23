@@ -4,9 +4,9 @@
 <svg width="22cm" height="14cm" viewBox="0 0 1150 720" stroke="white" version="1.1"
      xmlns="http://www.w3.org/2000/svg">
      <!--图纸区-->
-     <rect x="0" y="0" width="1150" height="720" fill="green" />
+     <rect x="0" y="0" width="1150" height="720" fill="transparent" />
      <!--球场框和中线-->
-     <path d="M 575,20 L 50,20 50,700 1100,700 1100,20 575,20 575,700 z" stroke="white" stroke-width="2" fill="#387417" />
+     <path d="M 575,20 L 50,20 50,700 1100,700 1100,20 575,20 575,700 z" stroke="white" stroke-width="2" fill="transparent" />
      <!--中线-->
      <circle cx="575" cy="360" r="91.5" stroke="white" stroke-width="2" fill-opacity="0" />
      <circle cx="575" cy="360" r="2" stroke="white" fill="white" />
@@ -22,8 +22,8 @@
      <!--禁区 -->
      <path d="M 50,159.4 L 215,159.4 215,561.6 50 561.6 z" stroke="white" stroke-width="2" fill-opacity="0" />
      <path d="M 1100,159.4 L 935,159.4 935,561.6 1100,561.6 z" stroke="white" stroke-width="2" fill-opacity="0" />
-     <path d="M 215,286.875 A 91.5,91.5 0 0,1 215,433.125 z" stroke="white" stroke-width="2" fill="green" />
-     <path d="M 935,286.875 A 91.5,91.5 0 0,0 935,433.125 z" stroke="white" stroke-width="2" fill="green" />
+     <path d="M 215,286.875 A 91.5,91.5 0 0,1 215,433.125 z" stroke="white" stroke-width="2" fill="transparent" />
+     <path d="M 935,286.875 A 91.5,91.5 0 0,0 935,433.125 z" stroke="white" stroke-width="2" fill="transparent" />
      <!--角球弧-->
      <path d="M 50,30 A 10,10 0 0,0 60,20 L 50,20 z" stroke="white" stroke-width="2" fill-opacity="0" />
      <path d="M 60,700 A 10,10 0 0,0 50,690 L 50,700 z" stroke="white" stroke-width="2" fill-opacity="0" />

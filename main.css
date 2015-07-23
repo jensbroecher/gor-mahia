@@ -12,13 +12,10 @@ body {
 	margin-left: 0px;
 }
 .soccerfieldhtml {
-	background-image: url(5106740833_f977acc82b_b.jpg);
-	background-size: 100% 100%;
-	background-repeat: no-repeat;
-	height: 100%;
+
 }
 .soccerfield {
-	background-image: url(img/soccer.gif);
+	background-image: url(img/Soccer%20ball-128.gif);
 	background-repeat: no-repeat;
 	background-size: 40% auto;
 	background-position: center center;
@@ -225,7 +222,7 @@ button:focus {
 .soccerfield {
 	background-image: url(img/Soccer_field.svg);
 	background-repeat: no-repeat;
-	background-size: cover;
+	background-size: 100% 100%;
 	background-color: #387417;
 }
 #fortablets {
