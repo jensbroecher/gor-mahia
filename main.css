@@ -12,13 +12,20 @@ body {
 	margin-left: 0px;
 }
 .soccerfieldhtml {
-
+	background-image: url(5106740833_f977acc82b_b.jpg);
+	background-repeat: no-repeat;
+	background-position: center top;
+	background-size: 100% 100%;
+	height: 100%;
+}
+.startbox {
+	background-image: url(img/white.png), url(img/Soccer%20ball-128.gif);
+	background-repeat: repeat, no-repeat;
+	background-size: 40% auto, auto auto;
+	background-position: center center;
+	background-color: #FFF !important;
 }
 .soccerfield {
-	background-image: url(img/Soccer%20ball-128.gif);
-	background-repeat: no-repeat;
-	background-size: 40% auto;
-	background-position: center center;
 	background-color: transparent !important;
 }
 select {
@@ -220,10 +227,7 @@ button:focus {
 	padding: 5%;
 }
 .soccerfield {
-	background-image: url(img/Soccer_field.svg);
-	background-repeat: no-repeat;
-	background-size: 100% 100%;
-	background-color: #387417;
+
 }
 #fortablets {
 	display: block;
