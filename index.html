@@ -208,7 +208,9 @@ function init() {
 
 </head>
 
-<body onLoad="playAudio('http://enunua.com/gormahia/kogalo.mp3');plswait();">
+<body>
+
+<div id="audiobutton" onclick="playAudio('http://enunua.com/gormahia/kogalo.mp3');plswait();"></div>
 
 <div id="fortablets">
 <img src="logo_wide.png" width="100%">
@@ -227,8 +229,6 @@ function init() {
 
 <button id="startbutton" onclick="localStorage.setItem('lang','eng');letsgo();">Start</button>
 <button style="display:none;" onclick="localStorage.setItem('lang','swa');letsgo();">Kiswahili</button>
-
-
 
 <div id="fans"></div>
 <div id="fans2"></div>

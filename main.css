@@ -192,6 +192,25 @@ button {
 	padding-bottom: 8px;
 	padding-left: 0px;
 }
+#audiobutton {
+	color: #000;
+	background-color: #transparent;
+    background-image: url(img/ic_volume_up_white_48px.svg);
+    background-size: 100% 100%;
+	text-align: center;
+	width: 40px;
+	height: 40px;
+	border: 3px solid #FFF;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	-webkit-tap-highlight-color: transparent;
+	transition: all 0.5s;
+	top: 10px;
+	right: 10px;
+	border-radius: 6px;
+	font-size: 16px;
+	position: absolute;
+	z-index: 100;
+}
 button:active {
   transition: all 0.5s;
 }

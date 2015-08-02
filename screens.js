@@ -43,11 +43,11 @@ checkNetConnection();
 	localStorage.setItem('latitude', latitude);
 	localStorage.setItem('longitude', longitude);
 	
-  };
+  }
 
   function error() {
     
-  };
+  }
 
   navigator.geolocation.getCurrentPosition(success, error);
 
@@ -110,7 +110,7 @@ while(valuefrompromt.length < 3){
 alert("Please enter at least 3 digits");
 valuefrompromt = prompt("Contribute to the team (Minimum KES 100) and become registered in the official Gor Mahia F.C. Fanclub! Membership is valid for 6 Months after which it needs to be renewed.", "100");
 }
-if ((valuefrompromt != 0) && (isNumber (valuefrompromt))) {
+if ((valuefrompromt !== 0) && (isNumber (valuefrompromt))) {
 localStorage.setItem('amount',valuefrompromt);
 contributiongo();
 }
@@ -181,7 +181,7 @@ catch(e) {
 function maxLengthCheck(object)
   {
     if (object.value.length > object.maxLength)
-      object.value = object.value.slice(0, object.maxLength)
+      object.value = object.value.slice(0, object.maxLength);
   }
   
 function loginwithnumberandpingo() {
