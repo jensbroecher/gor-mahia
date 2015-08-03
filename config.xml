@@ -30,7 +30,6 @@
     <gap:plugin name="org.apache.cordova.network-information" />
 	
 	<gap:plugin name="com.parse.cordova.core.pushplugin" />
-	<gap:plugin name="de.appplant.cordova.plugin.local-notification" />
 	<gap:plugin name="ca.purplemad.wallpaper" />
 	<gap:plugin name="it.mobimentum.phonegapspinnerplugin" />
 	
