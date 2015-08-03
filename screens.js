@@ -272,7 +272,7 @@ var fan_details_last_name = fan_details_last_name.toUpperCase();
 localStorage.setItem('fan_details_first_name',fan_details_first_name);
 localStorage.setItem('fan_details_last_name',fan_details_last_name);
 
-document.location.href = 'main/gotostart.html?activefan='+activefan+'';
+document.location.href = 'main/gotostart.html';
 localStorage.setItem('rememberuser','Yes');
 
 });
