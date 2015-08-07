@@ -82,17 +82,10 @@ function letsgo() {
 
 document.addEventListener("deviceready", onDeviceReady, false);
 
-function getCordovaPath() {
-  var absolutePath = window.location.pathname;
-  //14 is length of html file name(including .html) 
-  actualPath = absolutePath.substr( path, path.length - 14 );
-  return 'file://' + actualPath;
-}
-
 function playAudio() {
   //var audioElement = document.getElementById(id);
   //var url = audioElement.getAttribute('src');
-  var my_media = new Media(getCordovaPath() + 'kogalo.mp3',
+  var my_media = new Media('http://enunua.com/gormahia/kogalo.mp3',
   // success callback
   function () { console.log("playAudio():Audio Success"); },
   // error callback
