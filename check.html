@@ -159,6 +159,11 @@ $.validator.addMethod('phone', function(value, element) {
 
 $("#registernext_step_1").validate({
 		rules: {
+    email_en: {
+      required: false,
+      email: true,
+      remote: "http://enunua.com/gormahia/email-check.php"
+	  },
     phone_en: {
       required: true,
       phone: true,
@@ -166,6 +171,11 @@ $("#registernext_step_1").validate({
     }
   },
   messages: {
+      email_en: {
+	required: "This field is required.",
+      email: "Invalid Email Address.",
+      remote: "E-Mail already in use."
+			},
     phone_en: {
       required: "Please enter a phone number.",
       phone: "Please enter a phone number." }
