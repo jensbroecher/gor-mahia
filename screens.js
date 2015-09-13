@@ -101,6 +101,10 @@ function register() {
 	document.getElementById('registeraccount').style.display = 'block';
 	document.getElementById("mainholder").className = "blur";
 }
+function support() {
+	document.getElementById('support').style.display = 'block';
+	document.getElementById("mainholder").className = "blur";
+}
 function isNumber(n) { return /^-?[\d.]+(?:e-?\d+)?$/.test(n); } 
 
 function askhowmuch() {

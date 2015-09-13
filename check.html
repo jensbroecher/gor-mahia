@@ -33,7 +33,7 @@
 <div class="animated fadeIn infobox startbox">
 
 <span class="eng">
-Register as an <strong>Official Gor Mahia FC Fan</strong> with a small contribution to the club! <br><br>The Gor Mahia Fan Club App lets you view  news, live updates, player profiles, exclusive downloads, shop for merchandise and more!</span>
+Register as an <strong>Official Gor Mahia FC Fan</strong> and support the club! <br><br>Our Gor Mahia Fan Club App will let you view news & videos on the go and connect with other Gor Mahia fans.</span>
 <span class="swa">
 Kupata kusajiliwa kama shabiki rasmi wa <strong>Gor Mahia FC</strong> pamoja na mchango mdogo katika klabu na upatikanaji wa habari. Habari zinazo zipuka, mchezaji kupata maelezo rasmi Kipekee, kupakua na bidhaa  zaidi! + Kuingia mashindano yetu kwa mtandao, nakupata nafasi ya kushinda! </span>
 
@@ -42,7 +42,7 @@ Kupata kusajiliwa kama shabiki rasmi wa <strong>Gor Mahia FC</strong> pamoja na 
 <div class="animated fadeIn infobox">
 
 <span class="eng">
-Register as an official fan?
+<h1>Register as an official Gor Mahia fan?</h1>
 </span>
 <span class="swa">
 Kujiandikisha kama shabiki rasmi wa Gor Mahia FC?
@@ -56,10 +56,10 @@ Kujiandikisha kama shabiki rasmi wa Gor Mahia FC?
 <button style="width:200px;" onclick="alert('Coming soon...');">Kusajiliwa</button>
 </span>
 
-<br>
+
 
 <span class="eng">
-Are you already registered as a fan?
+<h1>Are you already registered as a fan?</h1>
 </span>
 <span class="swa">
 Je, tayari kusajiliwa kama shabiki?
@@ -68,6 +68,13 @@ Je, tayari kusajiliwa kama shabiki?
 <span class="eng">
 
 <button style="width:200px;" onclick="loginwithnumberandpin();">Login</button>
+    
+<span class="eng">
+<h1>Need help?</h1>
+</span>
+
+<button style="width:200px;" onclick="support();">Support</button>
+
 
 </span>
 <span class="swa">
@@ -80,7 +87,7 @@ Je, tayari kusajiliwa kama shabiki?
 
 <div id="loginwithnumberandpin" class="animated zoomIn layerbox">
 <span class="eng">
-Login
+<h1>Login</h1>
 </span>
 <span class="swa">
 Tafadhali kuingia shabiki namba yako na PIN.
@@ -139,7 +146,7 @@ $("#login_check").validate({
 
 <span id="register1" class="animated fadeIn">
 
-Personal Details
+<h1>Personal Details</h1>
 
 <form id="registernext_step_1">
 
@@ -190,7 +197,7 @@ $("#registernext_step_1").validate({
 
 <span id="register2" class="animated fadeIn" style="display:none;">
 
-Personal Details
+<h1>Personal Details</h1>
 
 <form id="registernext2_step2">
 
@@ -224,6 +231,7 @@ $("#registernext2_step2").validate({
 
 <span id="register3" class="animated fadeIn" style="display:none;">
 
+<h1>Set PIN to secure your account</h1>
 <form id="complete" action="javascript:complete_eng();">
 Please provide a 4-Digit PIN. It is used to login on other devices. Never share this PIN with anyone.<br>
 <input style="width:90px; font-size:17px; text-align:center; margin-right:5px;" type="tel" name="pin" required class="textfield" id="pin_en" placeholder="PIN" oninput="maxLengthCheck(this)"
@@ -264,6 +272,12 @@ $("#complete").validate({
 </div>
 
 <div id="fandetails" style="display:none;"></div>
+    
+<div id="support" class="animated zoomIn layerbox">
+<span class="eng">
+<h1>Support</h1>
+</span>
+</div>
 
 </body>
 </html>
