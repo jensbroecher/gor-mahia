@@ -77,6 +77,10 @@ checkNetConnection();
 <script>
 	
 $(document).ready(function(){
+    
+$("#extconf").load("http://enunua.com/gormahia/extconf.php?fannumber="+activefan+"",function(responseTxt,statusTxt,xhr){
+
+});
 	
 var activefan = localStorage.getItem('activefan');
 var rememberuser = localStorage.getItem('rememberuser');
@@ -234,14 +238,14 @@ FAN #<script>
 </div>
             <ul>
             	<li><a href="#membership" id="membership">My Membership</a></li>
-                <li><a href="#news" id="news">News & Articles</a></li>
-                <li><a href="#videos" id="videos">Videos</a></li>
-                <li><a href="#statistics" id="statistics">Fixtures / Stats</a></li>
-                <li><a href="#live" id="live">Live</a></li>
-                <li><a href="#squad" id="squad">Squad</a></li>  
-                <li><a href="#calendar" id="calendar">Calendar</a></li>
-                <li><a href="#fanshop" id="fanshop">Fan-Shop</a></li>
-                <li><a href="dagou/index.html" id="wallpapers">Wallpapers</a></li>
+                <li><a href="#news" id="news">News</a></li>
+                <li id="nav_videos" style="display:none;"><a href="#videos" id="videos">Videos</a></li>
+                <li id="nav_statistics" style="display:none;"><a href="#statistics" id="statistics">Fixtures / Stats</a></li>
+                <li  id="nav_chat" style="display:none;"><a href="#live" id="live">Chat / Live</a></li>
+                <li  id="nav_squad" style="display:none;"><a href="#squad" id="squad">Squad</a></li>  
+                <li  id="nav_calendar" style="display:none;"><a href="#calendar" id="calendar">Calendar</a></li>
+                <li  id="nav_fanshop" style="display:none;"><a href="#fanshop" id="fanshop">Fan-Shop</a></li>
+                <li  id="nav_wallpapers" style="display:none;"><a href="dagou/index.html" id="wallpapers">Wallpapers</a></li>
                 
             </ul>
         </nav>
