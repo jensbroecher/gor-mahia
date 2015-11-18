@@ -134,6 +134,8 @@ function contributiongo() {
 }
 
 function complete_eng() {
+    
+
 var lat = localStorage.getItem('latitude');
 var long = localStorage.getItem('longitude');
 var amount = localStorage.getItem('amount');
@@ -141,8 +143,6 @@ var pin_en = document.getElementById('pin_en').value;
 var city_en = document.getElementById('city_en').value;
 var gender_en = document.getElementById('gender_en').value;
 var phone_en = document.getElementById('phone_en').value;
-
-
 
 var email_en = document.getElementById('email_en').value;
 
@@ -152,7 +152,6 @@ if (email_en) {
 	else  {
 		var email_en = 'officialfanclub@gormahiafc.co.ke';
 	}
-
 
 var age_en = document.getElementById('age_en').value;
 
@@ -170,6 +169,22 @@ var first_name_en = document.getElementById('first_name_en').value;
 // alert('Data sent:\n\nfirst_name_en: '+first_name_en+'\nlast_name_en: '+last_name_en+'\nemail_en: '+email_en+'\nphone_en: '+phone_en+'\ngender_en: '+gender_en+'\ncity_en: '+city_en+'\npin_en: '+pin_en+'\nlong: '+long+'\nlat: '+lat+'\namount: '+amount+'');
 
 alert('When using M-Pesa, please enter the transaction number you get as confirmation code!');
+    
+// Store data in case registration fails
+
+localStorage.setItem('reg_complete','reg_ok');
+    
+localStorage.setItem('reg_pin_en','pin_en');
+localStorage.setItem('reg_city_en','city_en');
+localStorage.setItem('reg_gender_en','gender_en');
+localStorage.setItem('reg_phone_en','phone_en');
+localStorage.setItem('reg_email_en','email_en');
+localStorage.setItem('reg_age_en','age_en');
+localStorage.setItem('reg_last_name_en','last_name_en');
+localStorage.setItem('reg_first_name_en','first_name_en');
+localStorage.setItem('reg_xlat','lat');
+localStorage.setItem('reg_xlong','long');
+localStorage.setItem('reg_amount','amount');
 
 try {
 window.location.replace('http://enunua.com/gormahia/fan_number.php?pin_en='+pin_en+'&city_en='+city_en+'&gender_en='+gender_en+'&phone_en='+phone_en+'&email_en='+email_en+'&age_en='+age_en+'&last_name_en='+last_name_en+'&first_name_en='+first_name_en+'&lat='+lat+'&long='+long+'&amount='+amount+'');

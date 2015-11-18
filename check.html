@@ -11,6 +11,8 @@
 <script type="text/javascript" src="jquery.validate.min.js"></script>
 <script type="text/javascript" src="screens.js"></script>
     
+<script type="text/javascript" src="preventreload.js"></script>
+    
 <script type="text/javascript" src="materialize.js"></script>
 <link href="waves.css" rel="stylesheet" type="text/css">
 
@@ -53,7 +55,7 @@ Kujiandikisha kama shabiki rasmi wa Gor Mahia FC?
 
 <span class="eng">
 <center>
-<button class="waves-effect waves-dark" onclick="register();">
+<button class="waves-effect waves-dark" onclick="setTimeout(function(){ register(); }, 1000);">
     <svg style="width:24px;height:24px;vertical-align:middle;" viewBox="0 0 24 24">
     <path fill="#000000" d="M4,3C2.89,3 2,3.89 2,5V15A2,2 0 0,0 4,17H12V22L15,19L18,22V17H20A2,2 0 0,0 22,15V8L22,6V5A2,2 0 0,0 20,3H16V3H4M12,5L15,7L18,5V8.5L21,10L18,11.5V15L15,13L12,15V11.5L9,10L12,8.5V5M4,5H9V7H4V5M4,9H7V11H4V9M4,13H9V15H4V13Z" />
 </svg>
@@ -78,7 +80,7 @@ Je, tayari kusajiliwa kama shabiki?
 <span class="eng">
 
 <center>
-<button class="waves-effect waves-dark" onclick="loginwithnumberandpin();">
+<button class="waves-effect waves-dark" onclick="setTimeout(function(){ loginwithnumberandpin(); }, 1000);">
     
     <svg style="width:24px;height:24px;vertical-align:middle;" viewBox="0 0 24 24">
     <path fill="#000000" d="M2,12A10,10 0 0,1 12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12M17,12L12,7V10H8V14H12V17L17,12Z" />
@@ -92,7 +94,7 @@ Je, tayari kusajiliwa kama shabiki?
 </span>
 
 <center>
-<button class="waves-effect waves-dark" onclick="support();">
+<button class="waves-effect waves-dark" onclick="setTimeout(function(){ support(); }, 1000);">
     
     <svg style="width:24px;height:24px;vertical-align:middle;" viewBox="0 0 24 24">
     <path fill="#000000" d="M15.07,11.25L14.17,12.17C13.45,12.89 13,13.5 13,15H11V14.5C11,13.39 11.45,12.39 12.17,11.67L13.41,10.41C13.78,10.05 14,9.55 14,9C14,7.89 13.1,7 12,7A2,2 0 0,0 10,9H8A4,4 0 0,1 12,5A4,4 0 0,1 16,9C16,9.88 15.64,10.67 15.07,11.25M13,19H11V17H13M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12C22,6.47 17.5,2 12,2Z" />
@@ -183,15 +185,17 @@ $("#login_check").validate({
 
 <h1>Personal Details</h1>
     
+<div class="animated fadeIn" style="-webkit-animation-delay:1s;">
 <img src="img/123/numeric-1-box.svg">
 <img src="img/123/numeric-2-box-outline.svg">
 <img src="img/123/numeric-3-box-outline.svg">
+</div>
 
 <form id="registernext_step_1">
 
 <input name="first_name_en" id="first_name_en" type="text" class="textfield" required placeholder="First Name">
 <input name="last_name_en" id="last_name_en" type="text" class="textfield" required placeholder="Last Name">
-<input name="email_en" id="email_en" type="email" class="textfield" placeholder="E-Mail (Optional)">
+<input name="email_en" id="email_en" type="email" class="textfield" placeholder="E-Mail (Recommended)">
 <input name="phone_en" id="phone_en" type="tel" class="textfield" required placeholder="Phone">
 
 <button class="waves-effect waves-dark" id="next1">
@@ -244,9 +248,11 @@ $("#registernext_step_1").validate({
 
 <h1>Personal Details</h1>
     
+<div class="animated fadeIn" style="-webkit-animation-delay:1s;">
 <img src="img/123/numeric-1-box-outline.svg">
 <img src="img/123/numeric-2-box.svg">
 <img src="img/123/numeric-3-box-outline.svg">
+</div>
 
 <form id="registernext2_step2">
 
@@ -293,9 +299,11 @@ $("#registernext2_step2").validate({
 
 <h1>Set PIN to secure your account</h1>
     
+<div class="animated fadeIn" style="-webkit-animation-delay:1s;">
 <img src="img/123/numeric-1-box-outline.svg">
 <img src="img/123/numeric-2-box-outline.svg">
 <img src="img/123/numeric-3-box.svg">
+</div>
     
 <form id="complete" action="javascript:complete_eng();">
 Please provide a 4-Digit PIN. It is used to login on other devices. Never share this PIN with anyone.<br>
@@ -355,13 +363,27 @@ $("#complete").validate({
 <div id="support" class="animated zoomIn layerbox">
 <span class="eng">
 <h1>Support</h1>
-    If you have any problems registering or logging in, or have any questions or suggestions, please contact our support team at <a class="mailbutton"  href="mailto:info@gormahia.club">
+    If you have any problems registering or logging in, or have any questions or suggestions, please contact our support team at <div class="mailbutton" onclick="window.open('mailto:info@gormahia.club', '_system');">
+
     <svg style="width:24px;height:24px;vertical-align:middle;" viewBox="0 0 24 24">
     <path fill="#000000" d="M20,4H4A2,2 0 0,0 2,6V18A2,2 0 0,0 4,20H20A2,2 0 0,0 22,18V6A2,2 0 0,0 20,4M20,18H4V8L12,13L20,8V18M20,6L12,11L4,6V6H20V6Z" />
 </svg>
-    info@gormahia.club</a>
+    info@gormahia.club</div>
 <center>
-<button class="waves-effect waves-dark" onclick="location.reload();">OK</button>
+    
+<script>
+function support_ok() {
+    setTimeout(function(){ location.reload(); }, 1000);
+}   
+</script>
+    
+<button style="width:100px;" class="waves-effect waves-dark" onclick="support_ok();">
+    
+<svg style="width:24px;height:24px;vertical-align:middle;" viewBox="0 0 24 24">
+    <path fill="#000000" d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" />
+</svg>
+    
+    </button>
 </center>
 </span>
 </div>
