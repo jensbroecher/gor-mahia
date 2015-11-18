@@ -11,6 +11,9 @@
 <script type="text/javascript" src="cdv-plugin-parse.js"></script>
 
 <script type="text/javascript" charset="utf-8" src="jquery.min.js"></script>
+    
+<script type="text/javascript" src="materialize.js"></script>
+<link href="waves.css" rel="stylesheet" type="text/css">
 
 <script type="text/javascript">
 
@@ -142,12 +145,12 @@ function init() {
 
 <body>
 
-<div id="audiobutton" class="animated zoomIn" onclick="plswait();playAudio();"></div>
+<div id="audiobutton" class="animated fadeIn" onclick="plswait();playAudio();"></div>
 
 <div id="fortablets">
 <img src="logo_wide.png" width="100%">
 <br><br>
-<button onclick="localStorage.setItem('lang','eng');letsgo();">Start</button>
+<button class="waves-effect waves-dark" onclick="localStorage.setItem('lang','eng');letsgo();">Start</button>
 </div>
 
 <div id="loadingindicator" style="display:none">
@@ -159,7 +162,7 @@ function init() {
 <img id="logo" src="logo.png" width="100%">
 <h1 style="display:none;">Select Language</h1>
 
-<button id="startbutton" onclick="localStorage.setItem('lang','eng');letsgo();">Start</button>
+<button id="startbutton" class="waves-effect waves-dark"  onclick="localStorage.setItem('lang','eng');letsgo();" style="background-color:white !important;">Start</button>
 <button style="display:none;" onclick="localStorage.setItem('lang','swa');letsgo();">Kiswahili</button>
 
 <div id="fans"></div>

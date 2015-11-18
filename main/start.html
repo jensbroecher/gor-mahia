@@ -244,6 +244,7 @@ FAN #<script>
                 <li id="nav_videos" style="display:none;"><a href="#videos" id="videos">Videos</a></li>
                 <li id="nav_statistics" style="display:none;"><a href="#statistics" id="statistics">Fixtures / Stats</a></li>
                 <li  id="nav_chat" style="display:none;"><a href="#live" id="live">Chat / Live</a></li>
+                <li  id="nav_trivia" style="display:none;"><a href="#trivia" id="trivia">Trivia Game</a></li>
                 <li  id="nav_squad" style="display:none;"><a href="#squad" id="squad">Squad</a></li>  
                 <li  id="nav_calendar" style="display:none;"><a href="#calendar" id="calendar">Calendar</a></li>
                 <li  id="nav_fanshop" style="display:none;"><a href="#fanshop" id="fanshop">Fan-Shop</a></li>
@@ -293,7 +294,7 @@ $("#loading").fadeOut();
 else if (hash == "#live") {
 $("html, body").animate({ scrollTop: 0 }, "slow");
 $("#loading").fadeIn();
-$("#div1").load("http://enunua.com/gormahia/live.php",function(responseTxt,statusTxt,xhr){
+$("#div1").load("http://enunua.com/gormahia/live.php?fan="+activefan+"",function(responseTxt,statusTxt,xhr){
 $("#loading").fadeOut();
 });}
 
@@ -303,16 +304,20 @@ membershipstart();
 
 else if (hash == "#fanshop") {
 $("html, body").animate({ scrollTop: 0 }, "slow");
-$("#div1").load("http://enunua.com/gormahia/fanshop.php",function(responseTxt,statusTxt,xhr){});}
+$("#div1").load("http://enunua.com/gormahia/fanshop.php?fan="+activefan+"",function(responseTxt,statusTxt,xhr){});}
 
 else if (hash == "#squad") {
 $("html, body").animate({ scrollTop: 0 }, "slow");
 $("#div1").load("http://enunua.com/gormahia/squad.php",function(responseTxt,statusTxt,xhr){});}
+    
+else if (hash == "#trivia") {
+$("html, body").animate({ scrollTop: 0 }, "slow");
+$("#div1").load("http://enunua.com/gormahia/trivia.php?fan="+activefan+"",function(responseTxt,statusTxt,xhr){});}
 
 else if (hash == "#videos") {
 $("html, body").animate({ scrollTop: 0 }, "slow");
 $("#loading").fadeIn();
-$("#div1").load("http://enunua.com/gormahia/videos/videos.php",function(responseTxt,statusTxt,xhr){
+$("#div1").load("http://enunua.com/gormahia/videos/videos.php?fan="+activefan+"",function(responseTxt,statusTxt,xhr){
 $("#loading").fadeOut();
 });}
 
