@@ -35,12 +35,11 @@
     <gap:plugin name="cordova-plugin-android-support-v4" source="npm" />
         
     <gap:plugin name="cordova-plugin-barcodescanner" source="npm" />
-	
-	<gap:plugin name="com.parse.cordova.core.pushplugin" />
+
 	<gap:plugin name="ca.purplemad.wallpaper" />
 	<gap:plugin name="it.mobimentum.phonegapspinnerplugin" />
 	
-	<!-- <gap:plugin name='org.crosswalk.engine' version='1.3.0' source='pgb' /> -->
+	<gap:plugin name='org.crosswalk.engine' version='1.3.0' source='pgb' />
 	
 	<access origin="*"/> <!-- allow all pages, use for development -->
 
