@@ -4,6 +4,10 @@
 outline: none;
 }
 html {
+	background-image: url(bg.jpg);
+	background-repeat: no-repeat;
+	background-position: center top;
+	background-size: 100% 100%;
 	height: 100%;
 }
 body {
