@@ -135,6 +135,7 @@ function contributiongo() {
 
 function complete_eng() {
     
+showindicator();
 
 var lat = localStorage.getItem('latitude');
 var long = localStorage.getItem('longitude');
@@ -186,14 +187,9 @@ localStorage.setItem('reg_xlat','lat');
 localStorage.setItem('reg_xlong','long');
 localStorage.setItem('reg_amount','amount');
 
-try {
+setTimeout(function(){
 window.location.replace('http://enunua.com/gormahia/fan_number.php?pin_en='+pin_en+'&city_en='+city_en+'&gender_en='+gender_en+'&phone_en='+phone_en+'&email_en='+email_en+'&age_en='+age_en+'&last_name_en='+last_name_en+'&first_name_en='+first_name_en+'&lat='+lat+'&long='+long+'&amount='+amount+'');
-}
-catch(e) {
-   // alert("Error: " + e.message);
-	return;
-}
-
+}, 2000);
 
 }
 
