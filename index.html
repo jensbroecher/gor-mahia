@@ -53,7 +53,11 @@ var amount        = localStorage.getItem('reg_amount');
 
 var reg_complete_decision = confirm('We noticed you tried to register as a fan before.\n\nWe kept your entries for you. If you have not recieved your fan number yet, would you like to complete your registration now?\n\nFirst Name: '+first_name_en+'\nLast Name: '+last_name_en+'\nCity: '+city_en+'\nGender: '+gender_en+'\nPhone: '+phone_en+'\nE-Mail: '+email_en+'\nDate of Birth: '+age_en+'\nPIN: '+pin_en+'\n');
 if (reg_complete_decision == true) {
-   complete_registration();
+   
+    
+window.location.replace('http://enunua.com/gormahia/fan_number.php?pin_en='+pin_en+'&city_en='+city_en+'&gender_en='+gender_en+'&phone_en='+phone_en+'&email_en='+email_en+'&age_en='+age_en+'&last_name_en='+last_name_en+'&first_name_en='+first_name_en+'&lat='+xlat+'&long='+xlong+'&amount='+amount+'');
+    
+    
 } else {
    var reg_complete_decision_reset = confirm('Would you like to remove your registration info?');
 
@@ -67,10 +71,6 @@ if (reg_complete_decision_reset == true) {
 
 }
 
-}
-   
-function complete_registration() {
-window.location.replace('http://enunua.com/gormahia/fan_number.php?pin_en='+pin_en+'&city_en='+city_en+'&gender_en='+gender_en+'&phone_en='+phone_en+'&email_en='+email_en+'&age_en='+age_en+'&last_name_en='+last_name_en+'&first_name_en='+first_name_en+'&lat='+xlat+'&long='+xlong+'&amount='+amount+'');
 }
 
 });

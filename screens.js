@@ -110,6 +110,13 @@ function isNumber(n) { return /^-?[\d.]+(?:e-?\d+)?$/.test(n); }
 function askhowmuch() {
 
 var valuefrompromt = prompt("Contribute to the team (Minimum KES 100) and become registered in the official Gor Mahia F.C. Fanclub! Contribution is valid for 6 Months after which it needs to be renewed.", "100");
+
+// alert(valuefrompromt);
+
+if (valuefrompromt == null) {
+    askhowmuch();
+}
+
 while(valuefrompromt.length < 3){
 alert("Please enter at least 3 digits");
 valuefrompromt = prompt("Contribute to the team (Minimum KES 100) and become registered in the official Gor Mahia F.C. Fanclub! Membership is valid for 6 Months after which it needs to be renewed.", "100");
@@ -122,7 +129,6 @@ else if (!isNumber (valuefrompromt)) {
 alert("Please enter a number");
 askhowmuch();
 }
-
 }
 
 function contribution() {
@@ -140,6 +146,9 @@ showindicator();
 var lat = localStorage.getItem('latitude');
 var long = localStorage.getItem('longitude');
 var amount = localStorage.getItem('amount');
+    
+// alert(amount);
+    
 var pin_en = document.getElementById('pin_en').value;
 var city_en = document.getElementById('city_en').value;
 var gender_en = document.getElementById('gender_en').value;
