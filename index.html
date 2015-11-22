@@ -26,7 +26,7 @@ var reg_complete        = localStorage.getItem('reg_complete');
 
 if(reg_complete == 'reg_ok') {
     
-var email_en        = localStorage.getItem('email_en');
+var email_en        = localStorage.getItem('reg_email_en');
     
 $.get( "http://enunua.com/gormahia/email-check.php?email_en="+email_en+"",  function( data ) {
        if(data == "false") {
