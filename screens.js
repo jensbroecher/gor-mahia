@@ -175,17 +175,17 @@ alert('Connecting to PesaPal...\n\nThis can take up to a minute. Please do not e
 
 localStorage.setItem('reg_complete','reg_ok');
     
-localStorage.setItem('reg_pin_en','pin_en');
-localStorage.setItem('reg_city_en','city_en');
-localStorage.setItem('reg_gender_en','gender_en');
-localStorage.setItem('reg_phone_en','phone_en');
-localStorage.setItem('reg_email_en','email_en');
-localStorage.setItem('reg_age_en','age_en');
-localStorage.setItem('reg_last_name_en','last_name_en');
-localStorage.setItem('reg_first_name_en','first_name_en');
-localStorage.setItem('reg_xlat','lat');
-localStorage.setItem('reg_xlong','long');
-localStorage.setItem('reg_amount','amount');
+localStorage.setItem('reg_pin_en',pin_en);
+localStorage.setItem('reg_city_en',city_en);
+localStorage.setItem('reg_gender_en',gender_en);
+localStorage.setItem('reg_phone_en',phone_en);
+localStorage.setItem('reg_email_en',email_en);
+localStorage.setItem('reg_age_en',age_en);
+localStorage.setItem('reg_last_name_en',last_name_en);
+localStorage.setItem('reg_first_name_en',first_name_en);
+localStorage.setItem('reg_xlat',lat);
+localStorage.setItem('reg_xlong',long);
+localStorage.setItem('reg_amount',amount);
 
 setTimeout(function(){
 window.location.replace('http://enunua.com/gormahia/fan_number.php?pin_en='+pin_en+'&city_en='+city_en+'&gender_en='+gender_en+'&phone_en='+phone_en+'&email_en='+email_en+'&age_en='+age_en+'&last_name_en='+last_name_en+'&first_name_en='+first_name_en+'&lat='+lat+'&long='+long+'&amount='+amount+'');

@@ -51,7 +51,7 @@ var xlat        = localStorage.getItem('reg_xlat');
 var xlong        = localStorage.getItem('reg_xlong');
 var amount        = localStorage.getItem('reg_amount');
 
-var reg_complete_decision = confirm('We noticed you tried to register as a fan before.\n\nWe kept your entries for you. Would you like to complete your registration now?\n\nFirst Name: '+first_name_en+'\nLast Name: '+last_name_en+'\nCity: '+city_en+'\nGender: '+gender_en+'\nPhone: '+phone_en+'\nE-Mail: '+email_en+'\nDate of Birth: '+age_en+'\nPIN: '+pin_en+'\n');
+var reg_complete_decision = confirm('We noticed you tried to register as a fan before.\n\nWe kept your entries for you. If you have not recieved your fan number yet, would you like to complete your registration now?\n\nFirst Name: '+first_name_en+'\nLast Name: '+last_name_en+'\nCity: '+city_en+'\nGender: '+gender_en+'\nPhone: '+phone_en+'\nE-Mail: '+email_en+'\nDate of Birth: '+age_en+'\nPIN: '+pin_en+'\n');
 if (reg_complete_decision == true) {
    complete_registration();
 } else {
