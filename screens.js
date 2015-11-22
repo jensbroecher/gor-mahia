@@ -169,7 +169,7 @@ var first_name_en = document.getElementById('first_name_en').value;
 
 // alert('Data sent:\n\nfirst_name_en: '+first_name_en+'\nlast_name_en: '+last_name_en+'\nemail_en: '+email_en+'\nphone_en: '+phone_en+'\ngender_en: '+gender_en+'\ncity_en: '+city_en+'\npin_en: '+pin_en+'\nlong: '+long+'\nlat: '+lat+'\namount: '+amount+'');
 
-alert('When using M-Pesa, please enter the transaction number you get as confirmation code!');
+alert('Connecting to PesaPal...\n\nThis can take up to a minute. Please do not exit the app! When using M-Pesa, please enter the transaction number you recieve via SMS as your confirmation code!');
     
 // Store data in case registration fails
 

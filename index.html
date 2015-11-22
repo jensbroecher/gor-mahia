@@ -39,17 +39,17 @@ $.get( "http://enunua.com/gormahia/email-check.php?email_en="+email_en+"",  func
     
 function get_reg_info() {
     
-var pin_en       = localStorage.getItem('pin_en');
-var city_en        = localStorage.getItem('city_en');
-var gender_en        = localStorage.getItem('gender_en');
-var phone_en        = localStorage.getItem('phone_en');
-var email_en        = localStorage.getItem('email_en');
-var age_en        = localStorage.getItem('age_en');
-var last_name_en        = localStorage.getItem('last_name_en');
-var first_name_en       = localStorage.getItem('first_name_en');
-var xlat        = localStorage.getItem('xlat');
-var xlong        = localStorage.getItem('xlong');
-var amount        = localStorage.getItem('amount');
+var pin_en       = localStorage.getItem('reg_pin_en');
+var city_en        = localStorage.getItem('reg_city_en');
+var gender_en        = localStorage.getItem('reg_gender_en');
+var phone_en        = localStorage.getItem('reg_phone_en');
+var email_en        = localStorage.getItem('reg_email_en');
+var age_en        = localStorage.getItem('reg_age_en');
+var last_name_en        = localStorage.getItem('reg_last_name_en');
+var first_name_en       = localStorage.getItem('reg_first_name_en');
+var xlat        = localStorage.getItem('reg_xlat');
+var xlong        = localStorage.getItem('reg_xlong');
+var amount        = localStorage.getItem('reg_amount');
 
 var reg_complete_decision = confirm('We noticed you tried to register as a fan before.\n\nWe kept your entries for you. Would you like to complete your registration now?\n\nFirst Name: '+first_name_en+'\nLast Name: '+last_name_en+'\nCity: '+city_en+'\nGender: '+gender_en+'\nPhone: '+phone_en+'\nE-Mail: '+email_en+'\nDate of Birth: '+age_en+'\nPIN: '+pin_en+'\n');
 if (reg_complete_decision == true) {
