@@ -15,7 +15,9 @@
         JTH Consulting Kenya
     </author>
         
-    <platform name="android" />
+    <platform name="android">
+        <preference name="orientation" value="portrait" />
+    </platform>
 	
 	<icon src="icon.png" />
         
