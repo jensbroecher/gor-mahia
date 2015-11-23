@@ -11,6 +11,11 @@ ul{
 }
 body {
 	background-color: #FFFFFF;
+    margin: 0;
+    padding: 0;
+}
+html {
+    height: 100%;
 }
 #helpbox {
 	background-color: rgba(255, 255, 255, 0.9);
@@ -72,8 +77,7 @@ body {
 	margin-right: 6px;
 }
 #div1 {
-	height: auto;
-	margin-bottom: 80px;
+
 }
 #contentarea {
 	padding-right: 15px;
