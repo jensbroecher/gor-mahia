@@ -25,7 +25,6 @@
         <!-- Modernizr -->
         <script src="js/vendor/modernizr.custom.71422.js"></script>
 
-        <script type="text/javascript" src="cdv-plugin-parse.js"></script>
         <script type="text/javascript" src="qrcode.min.js"></script>
 
         
@@ -34,7 +33,7 @@
 
 
 document.addEventListener("deviceready", function(){
-    screen.lockOrientation('portrait');
+    screen.lockOrientation('default');
 });
 
 function checkNetConnection(){
@@ -80,10 +79,8 @@ checkNetConnection();
 	
 $(document).ready(function(){
     
-window_height = $(window).height();
-// window_height = window_height -5;
-// alert(window_height); 
-document.getElementById("div1").style.height = ""+window_height+"px";
+// window_height = $(window).height();
+// document.getElementById("div1").style.height = ""+window_height+"px";
     
 $("#extconf").load("http://enunua.com/gormahia/extconf.php?fannumber="+activefan+"",function(responseTxt,statusTxt,xhr){
 

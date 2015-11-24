@@ -16,7 +16,7 @@
     </author>
         
     <platform name="android">
-        <preference name="orientation" value="portrait" />
+        
     </platform>
 	
 	<icon src="icon.png" />
