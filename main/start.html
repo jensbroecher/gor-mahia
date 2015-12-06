@@ -175,6 +175,10 @@ setTimeout(function(){document.getElementById('helpbox').style.display='none';},
   <tr>
   
 <script>
+function openThis(whichurl) {
+    alert(whichurl);
+}
+    
 function openemailsharing() {
 var activefan = localStorage.getItem('activefan');
 window.open('http://enunua.com/gormahia/social/share_em.php?fan='+activefan+'', '_system');
@@ -187,7 +191,7 @@ window.open('http://enunua.com/gormahia/social/share_em.php?fan='+activefan+'', 
     
 <td><img width="50"  src="img/mail.png" onclick="openemailsharing();"></td>
 
-<td><img width="50"  src="img/whatsapp.png" onclick="window.open('http://enunua.com/gormahia/social/share_wa.php', '_system');"></td>
+<td><img width="50"  src="img/whatsapp.png" onclick="window.open('whatsapp://send?text=Download the Gor Mahia Fan Club App and register as an Official Gor Mahia F.C. Fan. Support your favourite club and view news, live updates, player profiles, exclusive downloads, merchandise and more!', '_system');"></td>
     
   </tr>
 </table>
@@ -253,21 +257,24 @@ FAN #<script>
 <li id="nav_videos">
     <a href="#videos" id="videos">Videos</a>
 </li>
-<li id="nav_statistics" style="display:none;">
-    <a href="#statistics" id="statistics">Fixtures / Stats</a>
+<li id="nav_team" style="display:none;">
+    <a href="#team" id="team">Team</a>
+</li>
+<li id="nav_fixtures" style="display:none;">
+    <a href="#fixtures" id="fixtures">Fixtures / Results</a>
+</li>
+<li id="nav_table" style="display:none;">
+    <a href="#table" id="table">Table Standing</a>
 </li>
 <li id="nav_offers" style="display:none;">
     <a href="#offers" id="offers">Special Offers</a>
 </li>
-<li id="nav_chat" style="display:none;">
+<li id="nav_live" style="display:none;">
     <a href="#live" id="live">Chat / Live</a>
 </li>
 <li id="nav_trivia" style="display:none;">
-    <a href="#trivia" id="trivia">Trivia Game</a>
+    <a href="#trivia" id="trivia">Trivia</a>
 </li>
-<li id="nav_squad" style="display:none;">
-    <a href="#squad" id="squad">Squad</a>
-</li>  
 <li id="nav_calendar" style="display:none;">
     <a href="#calendar" id="calendar">Calendar</a>
 </li>
@@ -336,9 +343,16 @@ else if (hash == "#fanshop") {
 $("html, body").animate({ scrollTop: 0 }, "slow");
 $("#div1").load("http://enunua.com/gormahia/fanshop.php?fan="+activefan+"",function(responseTxt,statusTxt,xhr){});}
 
-else if (hash == "#squad") {
+else if (hash == "#team") {
 $("html, body").animate({ scrollTop: 0 }, "slow");
-$("#div1").load("http://enunua.com/gormahia/squad.php",function(responseTxt,statusTxt,xhr){});}
+$("#div1").load("http://enunua.com/gormahia/team.php",function(responseTxt,statusTxt,xhr){});}
+    
+else if (hash == "#fixtures") {
+$("html, body").animate({ scrollTop: 0 }, "slow");
+$("#loading").fadeIn();
+$("#div1").load("http://enunua.com/gormahia/fixtures.php?fan="+activefan+"",function(responseTxt,statusTxt,xhr){
+$("#loading").fadeOut();
+});}  
     
 else if (hash == "#trivia") {
 $("html, body").animate({ scrollTop: 0 }, "slow");
