@@ -22,7 +22,7 @@
 $(document).ready(function() {
     
 $.get( "http://enunua.com/gormahia/check_app_update.php",  function( data ) {
-    var currentversion = "5";
+    var currentversion = "6";
     var serverversion = data;
     if (currentversion < serverversion) {
         alert("Your app is outdated. Please install the latest version from google play.");
