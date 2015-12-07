@@ -27,6 +27,25 @@
 
         <script type="text/javascript" src="qrcode.min.js"></script>
 
+<script type="text/javascript">
+    
+// Check if update is available
+    
+$(document).ready(function() {
+    
+$.get( "http://enunua.com/gormahia/check_app_update.php",  function( data ) {
+    var currentversion = "6";
+    var serverversion = data;
+    if (currentversion < serverversion) {
+        alert("Your app is outdated. Please install the latest version from google play.");
+        window.open('http://gormahia.club', '_system');
+    }
+});
+
+});
+
+</script>
+        
         
 <script type="text/javascript" charset="utf-8">
 		
