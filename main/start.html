@@ -205,13 +205,13 @@ setTimeout(function(){document.getElementById('helpbox').style.display='none';},
 <script>    
 function openemailsharing() {
 var activefan = localStorage.getItem('activefan');
-window.open('http://enunua.com/gormahia/social/share_em.php?fan='+activefan+'', '_system');
+window.open('http://enunua.com/gormahia/social/share_em.php?task=shareapp&fan='+activefan+'', '_system');
 }
 </script>
   
-<td><img width="50"  src="img/facebook.png" onclick="window.open('http://enunua.com/gormahia/social/share_fb.html', '_system');"></td>
+<td><img width="50"  src="img/facebook.png" onclick="window.open('http://enunua.com/gormahia/social/share_fb.php?task=shareapp', '_system');"></td>
     
-<td><img width="50"  src="img/twitter.png" onclick="window.open('http://enunua.com/gormahia/social/share_tw.html', '_system');"></td>
+<td><img width="50"  src="img/twitter.png" onclick="window.open('http://enunua.com/gormahia/social/share_tw.php?task=shareapp', '_system');"></td>
     
 <td><img width="50"  src="img/mail.png" onclick="openemailsharing();"></td>
 
