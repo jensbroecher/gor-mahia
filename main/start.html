@@ -37,12 +37,38 @@ document.addEventListener("deviceready", function(){
 });
 
 function checkNetConnection(){
+    
+var activefan = localStorage.getItem('activefan');
+    
  jQuery.ajaxSetup({async:true});
  re="";
  r=Math.round(Math.random() * 10000);
- $.get("http://enunua.com/gormahia/on.php",{subins:r},function(d){
+ $.get("http://enunua.com/gormahia/on.php?id="+activefan+"",{subins:r},function(d){
 
 onOnline();
+
+document.getElementById("oncom").innerHTML = d;
+     
+m1 = document.getElementById("m1").innerHTML;
+m2 = document.getElementById("m2").innerHTML;
+
+console.log(""+m1+" und "+m2+"");
+     
+if (m1 == "wa") {
+$.get( "http://enunua.com/gormahia/on.php?task=reset&id="+activefan+"", function() {
+  window.open("http://enunua.com/gormahia/social/share_wa.php?task=news&id="+m2+"", "_system");
+});
+}
+if (m1 == "tw") {
+$.get( "http://enunua.com/gormahia/on.php?task=reset&id="+activefan+"", function() {
+  window.open("http://enunua.com/gormahia/social/share_tw.php?task=news&id="+m2+"", "_system");
+});
+}
+if (m1 == "fb") {
+$.get( "http://enunua.com/gormahia/on.php?task=reset&id="+activefan+"", function() {
+  window.open("http://enunua.com/gormahia/social/share_fb.php?task=news&id="+m2+"", "_system");
+});
+}
 
  }).error(function(){
   re=false;
@@ -145,6 +171,8 @@ correctLevel : QRCode.CorrectLevel.H
 
 <body onLoad="checkonload();">
     
+<div style="display:none;" id="oncom"></div>
+    
 <div id="extconf"></div>
 
 <div id="helpbox">
@@ -174,11 +202,7 @@ setTimeout(function(){document.getElementById('helpbox').style.display='none';},
 <table align="center" border="0" cellpadding="5">
   <tr>
   
-<script>
-function openThis(whichurl) {
-    alert(whichurl);
-}
-    
+<script>    
 function openemailsharing() {
 var activefan = localStorage.getItem('activefan');
 window.open('http://enunua.com/gormahia/social/share_em.php?fan='+activefan+'', '_system');
@@ -324,7 +348,7 @@ activefan = localStorage.getItem('activefan');
 if (hash == "#news") {
 $("html, body").animate({ scrollTop: 0 }, "slow");
 $("#loading").fadeIn();
-$("#div1").load("http://enunua.com/gormahia/news/news.php",function(responseTxt,statusTxt,xhr){
+$("#div1").load("http://enunua.com/gormahia/news/news.php?fan="+activefan+"",function(responseTxt,statusTxt,xhr){
 $("#loading").fadeOut();
 });}
 
