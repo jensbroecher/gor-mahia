@@ -22,10 +22,10 @@
 $(document).ready(function() {
     
 $.get( "http://enunua.com/gormahia/check_app_update.php",  function( data ) {
-    var currentversion = "6";
+    var currentversion = "7";
     var serverversion = data;
     if (currentversion < serverversion) {
-        alert("Your app is outdated. Please install the latest version from google play.");
+        alert("Update available. Please install the latest version from google play.");
         window.open('http://gormahia.club', '_system');
     }
 });
