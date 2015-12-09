@@ -309,7 +309,7 @@ FAN #<script>
 <li id="nav_table" style="display:none;">
     <a href="#table" id="table">Table Standing</a>
 </li>
-<li id="nav_offers" style="display:none;">
+<li id="nav_offers">
     <a href="#offers" id="offers">Special Offers</a>
 </li>
 <li id="nav_live" style="display:none;">
@@ -375,6 +375,13 @@ else if (hash == "#live") {
 $("html, body").animate({ scrollTop: 0 }, "slow");
 $("#loading").fadeIn();
 $("#div1").load("http://enunua.com/gormahia/live.php?fan="+activefan+"",function(responseTxt,statusTxt,xhr){
+$("#loading").fadeOut();
+});}
+    
+else if (hash == "#offers") {
+$("html, body").animate({ scrollTop: 0 }, "slow");
+$("#loading").fadeIn();
+$("#div1").load("http://enunua.com/gormahia/offers/offers.php?fan="+activefan+"",function(responseTxt,statusTxt,xhr){
 $("#loading").fadeOut();
 });}
 
