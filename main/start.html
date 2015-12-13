@@ -41,7 +41,7 @@
                 var serverversion = data;
                 if (currentversion < serverversion) {
                     alert("Update available. Please install the latest version from google play.");
-                    window.open('http://gormahia.club', '_system');
+                    // window.open('http://gormahia.club', '_system');
                 }
             });
 
@@ -133,7 +133,7 @@
             // document.getElementById("div1").style.height = ""+window_height+"px";
 
             $("#start_menu").load("http://enunua.com/gormahia/start_menu.php?fannumber=" + activefan + "", function(responseTxt, statusTxt, xhr) {
-
+                $.getScript('js/pushy.min.js');
             });
 
             var activefan = localStorage.getItem('activefan');
@@ -301,9 +301,7 @@ setTimeout(function(){document.getElementById('sharebox').style.display='none';}
 
         </div>
 
-        <ul id="start_menu">
-            
-        </ul>
+        <ul id="start_menu"></ul>
 
     </nav>
 
@@ -320,9 +318,6 @@ setTimeout(function(){document.getElementById('sharebox').style.display='none';}
         <div id="fandetails"></div>
         <div id="div1"></div>
     </div>
-
-    <!-- Pushy JS -->
-    <script src="js/pushy.min.js"></script>
 
     <script src="http://enunua.com/gormahia/start_menu.js"></script>
 
