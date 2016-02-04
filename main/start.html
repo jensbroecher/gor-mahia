@@ -150,7 +150,10 @@
 
             $("#fandetails").load("http://enunua.com/gormahia/loadfandetails.php?fannumber=" + activefan + "", function(responseTxt, statusTxt, xhr) {
 
-                membershipstart();
+                $("#loading").fadeIn();
+                $("#div1").load("http://enunua.com/gormahia/news/news.php?fan=" + activefan + "", function(responseTxt, statusTxt, xhr) {
+                    $("#loading").fadeOut();
+                });
 
             });
 
