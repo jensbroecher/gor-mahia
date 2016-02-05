@@ -243,6 +243,7 @@ button:focus {
 	z-index: 100;
 	top: 0px;
 	text-align: center;
+	background-image: url(main/img/logo_on_dark.png);
 	background-color: rgba(0, 102, 52, 0.84);
 	background-repeat: no-repeat;
 	background-size: auto 80%;

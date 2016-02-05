@@ -95,6 +95,7 @@ html {
 	width: 100%;
 	position: fixed;
 	z-index: 100;
+	background-image: url(../img/logo_on_dark.png);
 	top: 0px;
 	text-align: center;
 	background-color: rgba(0, 102, 52, 0.84);
