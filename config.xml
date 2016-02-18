@@ -15,9 +15,10 @@
         JTH Consulting Kenya
     </author>
         
-    <platform name="android">
+    <preference name="windows-target-version" value="10.0" />
+    <preference name="windows-phone-target-version" value="10.0" />
         
-    </platform>
+    <splash src="icon.png" platform="winphone" />
 	
 	<icon src="icon.png" />
         
