@@ -5,7 +5,7 @@
         versionCode = "8" 
         version     = "7.1.0" >
 
-    <name>Gor Mahia FC Fanclub</name>
+    <name>Gor Mahia FC</name>
 
     <description>
 		Gor Mahia FC Fanclub
@@ -15,10 +15,7 @@
         JTH Consulting Kenya
     </author>
         
-    <preference name="windows-target-version" value="10.0" />
-    <preference name="windows-phone-target-version" value="10.0" />
-        
-    <splash src="icon.png" platform="winphone" />
+    <platform name="android" />
 	
 	<icon src="icon.png" />
         
